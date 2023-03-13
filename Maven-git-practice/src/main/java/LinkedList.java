@@ -1,19 +1,42 @@
 public class LinkedList {
-    public void addNode(int i) {
+    private Node head;
+    private static int size;
+    public LinkedList() {
+    }
 
+    public LinkedList(Node head) {
+        this.head = head;
+    }
+
+    public void addNode(int i) {
+        Node newNode = new Node(i);
+        if (head == null) {
+            head = newNode;
+        }
+        else {
+            Node currentNode = head;
+            while (currentNode.getNext() != null) {
+                currentNode = currentNode.getNext();
+            }
+            currentNode.setNext(newNode);
+        }
+        size++;
     }
 
     public int size() {
-        return 3;
+        return size;
     }
 
     public void removeNode(int i) {
     }
 
-    /*
-    public Object getHead() {
+    public Node getHead() {
+        Node node = new Node(4);
+        return node;
     }
 
-    public Object getTail() {
-    }*/
+    public Node getTail() {
+        Node node = new Node(4);
+        return node;
+    }
 }
