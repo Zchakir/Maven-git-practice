@@ -1,10 +1,9 @@
-import java.util.List;
-
 public class LinkedList {
-    List list = new java.util.LinkedList<Integer>();
+    java.util.LinkedList<Data> list = new java.util.LinkedList<Data>();
 
     public void addNode(int arg){
-        list.add(arg);
+        Data element = new Data(arg);
+        list.add(element);
     }
 
     public int size(){
@@ -12,15 +11,22 @@ public class LinkedList {
     }
 
     public void removeNode(int arg){
-        list.remove(arg);
+        for (Data element : list ){
+            if(element.data == arg){
+                list.remove(element);
+                return;
+            }
+        }
     }
 
-    public void getHead(){
-
+    public Data getHead(){
+        Data head = (Data) list.get(0);
+        return head;
     }
 
-    public void getTail(){
-
+    public Data getTail(){
+        Data tail = (Data) list.get(list.size()-1);
+        return tail;
     }
 
 }
