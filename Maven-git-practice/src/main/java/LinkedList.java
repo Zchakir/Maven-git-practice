@@ -55,6 +55,7 @@ public class LinkedList {
 
     public Node getNode(int i) {
         Node node = new Node(10);
+        System.out.println("test");
         return node;
     }
 }
