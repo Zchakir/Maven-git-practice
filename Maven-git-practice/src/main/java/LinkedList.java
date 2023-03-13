@@ -53,6 +53,11 @@ public class LinkedList {
 		return null;
 	}
 
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
 	
 
 	
