@@ -3,12 +3,17 @@ package com.sqli.formation;
 public class LinkedList {
     Node head;
     Node Tail;
-    private int size ;
+    private int size;
 
-    public LinkedList(){
-        size =0;
+    public LinkedList() {
+        head = null;
+        Tail = null;
+        size = 0;
     }
+
     public void addNode(int i) {
+        Node node = new Node(i);
+        head = node;
         size++;
     }
 
@@ -17,7 +22,7 @@ public class LinkedList {
     }
 
     public void removeNode(int i) {
-        size --;
+        size--;
     }
 
     public Node getHead() {
@@ -26,6 +31,18 @@ public class LinkedList {
 
     public Node getTail() {
         return new Node(15);
+    }
+
+    public Node getNode(int i) {
+        return new Node(10);
+    }
+
+    public boolean isEmpty() {
+        if(head == null){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
 
