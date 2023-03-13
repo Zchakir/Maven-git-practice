@@ -2,11 +2,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LinkedList {
-    List<Data> dataList;
+    List<Node> nodeList;
 
 
     LinkedList(){
-        dataList=new ArrayList<>();
+        nodeList =new ArrayList<>();
     }
 
 
@@ -14,26 +14,31 @@ public class LinkedList {
 
     public void addNode(int i) {
 
-        this.dataList.add(new Data(i));
+        this.nodeList.add(new Node(i));
     }
 
     public int size() {
        /* int number=0;
         while (this.dataList.get(number)!=null)
             number++;*/
-        return this.dataList.size();
+        return this.nodeList.size();
     }
 
     public void removeNode(int i) {
-        this.dataList.remove(1);
+        this.nodeList.remove(1);
     }
 
-    public Data getHead() {
+    public Node getHead() {
 
-        return this.dataList.get(0);
+        return this.nodeList.get(0);
     }
 
-    public Data getTail() {;
-        return  this.dataList.get(dataList.size()-1);
+    public Node getTail() {;
+        return  this.nodeList.get(nodeList.size()-1);
+    }
+
+    public Node getNode(int i) {
+        return  new Node(i);
+
     }
 }

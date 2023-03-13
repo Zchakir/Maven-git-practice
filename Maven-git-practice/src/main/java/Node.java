@@ -1,7 +1,7 @@
-public class Data {
-    private int data;
+public class Node {
+    public int data;
 
-    public Data(int number) {
+    public Node(int number) {
         this.data = number;
     }
 

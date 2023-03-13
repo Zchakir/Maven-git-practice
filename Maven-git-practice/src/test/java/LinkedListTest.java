@@ -17,8 +17,8 @@ public class LinkedListTest {
     }
 
 
-   @Tests
-    public void testRemoveNode() {
+   @Test
+   public void testRemoveNode() {
         LinkedList list = new LinkedList();
         list.addNode(5);
         list.addNode(10);
@@ -29,7 +29,7 @@ public class LinkedListTest {
         assertEquals(15, list.getTail().getData());
     }
 
-/*
+
     @Test
     public void testGetNode() {
         LinkedList list = new LinkedList();
@@ -40,7 +40,7 @@ public class LinkedListTest {
         assertNotNull(node);
         assertEquals(10, node.data);
     }
-
+/*
     @Test
     public void testIsEmpty() {
         LinkedList list = new LinkedList();
