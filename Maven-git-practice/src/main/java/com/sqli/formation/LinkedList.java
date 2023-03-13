@@ -33,4 +33,11 @@ public class LinkedList {
         Node node = new Node(i);
         return  node;
     }
+
+    public boolean isEmpty() {
+        if (list.isEmpty()){
+            return true;
+        }
+        return false;
+    }
 }
