@@ -141,7 +141,7 @@ public class LinkedListTest {
         assertEquals(20, list.getTail().data);
     }
     
-    /*
+    
 
     @Test
     public void testRemoveNonExistingNode() {
@@ -153,6 +153,8 @@ public class LinkedListTest {
         assertEquals(5, list.getHead().data);
         assertEquals(10, list.getTail().data);
     }
+    
+    /*
 
     @Test
     public void testGetNodeFromEmptyList() {
