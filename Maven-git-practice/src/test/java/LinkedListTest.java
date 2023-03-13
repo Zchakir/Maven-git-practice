@@ -1,3 +1,5 @@
+import com.sqli.formation.LinkedList;
+import com.sqli.formation.Node;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -30,7 +32,7 @@ public class LinkedListTest {
         list.addNode(5);
         list.addNode(10);
         list.addNode(15);
-        Node node = list.getNode(10);
+        Node node = list.getNode(1);
         assertNotNull(node);
         assertEquals(10, node.data);
     }
@@ -42,6 +44,7 @@ public class LinkedListTest {
         list.addNode(5);
         assertFalse(list.isEmpty());
     }
+
     @Test
     public void testAddNodeToEmptyList() {
         LinkedList list = new LinkedList();
@@ -139,7 +142,7 @@ public class LinkedListTest {
         list.addNode(5);
         list.addNode(10);
         list.addNode(15);
-        assertEquals(10, list.getNode(10).data);
+        assertEquals(10, list.getNode(1).data);
     }
 
     @Test
