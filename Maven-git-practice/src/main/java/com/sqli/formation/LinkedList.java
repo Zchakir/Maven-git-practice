@@ -55,7 +55,12 @@ public class LinkedList {
 
 
     public Node getNode(int i) {
-        return list.get(i);
+        for (Node node : list) {
+            if (node.data == i) {
+                return node;
+            }
+        }
+        return null;
     }
 
     public boolean isEmpty() {
