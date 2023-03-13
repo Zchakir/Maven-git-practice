@@ -37,7 +37,7 @@ public class LinkedList {
         try {
             return list.get(0);
         } catch (Exception e) {
-            System.out.println("List is empty");
+
             return null;
         }
 
@@ -47,7 +47,7 @@ public class LinkedList {
         try{
         return list.get(list.size() - 1);}
         catch (Exception e){
-            System.out.println("List is empty");
+
             return null;
         }
 
@@ -77,7 +77,7 @@ public class LinkedList {
             list.add(i1, node);
             return true;
         } catch (Exception e) {
-            System.out.println("Index out of bound");
+
             return false;
         }
 
