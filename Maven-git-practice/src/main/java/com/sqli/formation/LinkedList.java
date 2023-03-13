@@ -21,24 +21,41 @@ public class LinkedList {
         return this.list.size();
     }
 
-    public void removeNode(int i) {
-        Node node = new Node(i);
-        this.list.remove(node);
+    public boolean removeNode(int i) {
+
+            for (Node node : list) {
+                if (node.data == i) {
+                    this.list.remove(node);
+                    return true;
+                }
+            }
+            return false;
+
     }
 
     public Node getHead() {
-        return list.get(0);
+        try {
+            return list.get(0);
+        } catch (Exception e) {
+            System.out.println("List is empty");
+            return null;
+        }
+
     }
 
     public Node getTail() {
-        return list.get(list.size() - 1);
-
+        try{
+        return list.get(list.size() - 1);}
+        catch (Exception e){
+            System.out.println("List is empty");
+            return null;
+        }
 
     }
 
 
     public Node getNode(int i) {
-        return new Node(i);
+        return list.get(i);
     }
 
     public boolean isEmpty() {
@@ -47,5 +64,17 @@ public class LinkedList {
         } else {
             return false;
         }
+    }
+
+    public boolean addNodeAtIndex(int i, int i1) {
+        try {
+            Node node = new Node(i);
+            list.add(i1, node);
+            return true;
+        } catch (Exception e) {
+            System.out.println("Index out of bound");
+            return false;
+        }
+
     }
 }
