@@ -1,5 +1,6 @@
 import com.sqli.formation.LinkedList;
 
+import com.sqli.formation.Node;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -26,7 +27,7 @@ public class LinkedListTest {
         assertEquals(5, list.getHead());
         assertEquals(15, list.getTail());
     }
-/*
+
     @Test
     public void testGetNode() {
         LinkedList list = new LinkedList();
@@ -37,7 +38,7 @@ public class LinkedListTest {
         assertNotNull(node);
         assertEquals(10, node.data);
     }
-
+    /*
     @Test
     public void testIsEmpty() {
         LinkedList list = new LinkedList();

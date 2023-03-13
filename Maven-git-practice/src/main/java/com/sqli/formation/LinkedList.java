@@ -27,4 +27,10 @@ public class LinkedList {
     public Object getTail() {
         return list.get(list.size() -1);
     }
+
+
+    public Node getNode(int i) {
+        Node node = new Node(i);
+        return  node;
+    }
 }
