@@ -50,4 +50,10 @@ public class LinkedList {
 		return node;
 	}
 
+	public Node getNode(int i) {
+		Node new_node=new Node();
+		new_node.data=10;
+		return new_node;
+	}
+
 }
