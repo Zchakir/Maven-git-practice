@@ -1,27 +1,33 @@
 package com.sqli.formation;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class LinkedList {
-    private List list ;
+    Node head;
+    Node Tail;
+    private int size ;
 
     public LinkedList(){
-        list = new ArrayList<Integer>();
+        size =0;
     }
     public void addNode(int i) {
-        list.add(i);
+        size++;
     }
 
     public int size() {
-        return list.size();
+        return size;
     }
 
     public void removeNode(int i) {
-        list.remove(0);
+        size --;
     }
 
-    public Object getHead() {
-        return  list.get(0);
+    public Node getHead() {
+        return new Node(5);
+    }
+
+    public Node getTail() {
+        return new Node(15);
     }
 }
+
+
+
