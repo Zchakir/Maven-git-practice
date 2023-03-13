@@ -24,13 +24,10 @@ public class LinkedList {
             return false;
         }
 
-        // If head node contains the value, set the head to the next node
         if (head.data == value) {
             head = head.next;
             return true;
         }
-
-        // Traverse the list and find the node to remove
         Node<Integer> current = head;
         while (current.next != null) {
             if (current.next.data == value) {
@@ -69,17 +66,20 @@ public class LinkedList {
     }
 
     public Node getNode(int data) {
-        Node<Integer> current = head;
-        if (head == null) {
+        Node<Integer> current = this.head;
+
+        if (current == null) {
             return null;
         } else {
-            current = head;
-            while (current.next != null && current.data != data) {
+            while (current.next != null) {
+                if (current.data == data) {
+                    return current;
+                }
                 current = current.next;
             }
 
         }
-        return current;
+        return current.data == data ? current : null;
     }
 
     public boolean isEmpty() {
@@ -87,6 +87,10 @@ public class LinkedList {
     }
 
     public boolean addNodeAtIndex(int data, int index) {
+        if (index > this.size()) {
+            return false;
+        }
+
         Node<Integer> newNode = new Node<>(data);
         if (index == 0) {
             newNode.next = head;
@@ -108,4 +112,25 @@ public class LinkedList {
     public void clear() {
         this.head = null;
     }
+
+    public Node getNodeByIndex(int index) {
+
+    if(index>this.size()-1){
+        return null;
+    }else{
+            if(index==0){
+                return head;
+            }else{
+                Node current=head;
+               while(index>0){
+                   current=current.next;
+                   index--;
+               }
+               return current;
+            }
+
+    }
+
+    }
+
 }
