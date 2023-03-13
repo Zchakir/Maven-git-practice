@@ -22,33 +22,34 @@ public class LinkedList {
         public int hashCode() {
             return Objects.hash(data);
         }
-
-
     }
-    private Vector<Node> list = new Vector<>() ;
+
+    private Vector<Node> list = new Vector<>();
+
     public void addNode(int i) {
         list.add(new Node(i));
     }
+
     public int size() {
         return list.size();
     }
 
 
     public Node getHead() {
-        if(!list.isEmpty())
+        if (!list.isEmpty())
             return list.firstElement();
         return null;
     }
 
     public Node getTail() {
-        if(!list.isEmpty())
+        if (!list.isEmpty())
             return list.lastElement();
         return null;
     }
 
     public Node getNode(int i) {
         return list.stream().
-                filter((Node node) -> node.data == i )
+                filter((Node node) -> node.data == i)
                 .findFirst()
                 .orElse(null);
     }
@@ -61,20 +62,17 @@ public class LinkedList {
         try {
             list.add(i1, new Node(i));
             return true;
-        }catch (IndexOutOfBoundsException e){
+        } catch (IndexOutOfBoundsException e) {
             return false;
         }
     }
 
     public boolean removeNode(int i) {
-            if(!list.isEmpty() && list.contains(new Node(i))){
-
-                list.remove(new Node(i));
-                return true;
-            }
-            return false;
-
-
+        if (!list.isEmpty() && list.contains(new Node(i))) {
+            list.remove(new Node(i));
+            return true;
+        }
+        return false;
     }
 
     public void clear() {
