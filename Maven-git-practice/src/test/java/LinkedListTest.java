@@ -1,6 +1,7 @@
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -115,7 +116,7 @@ public class LinkedListTest {
         assertEquals(2, list.size());
     }
 
-    /*
+    
     @Test
     public void testRemoveNodeFromEmptyList() {
         LinkedList list = new LinkedList();
@@ -124,6 +125,8 @@ public class LinkedListTest {
         assertNull(list.getHead());
         assertNull(list.getTail());
     }
+    
+    /*
 
     @Test
     public void testRemoveNodeFromNonEmptyList() {

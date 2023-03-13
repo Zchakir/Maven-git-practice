@@ -20,27 +20,40 @@ public class LinkedList {
 	}
 
 	public int size() {
-		return size;
+		return list.size();
 		  
 		
 		
 	}
 
-	public void removeNode(int i) {
-		size--;
+	public boolean removeNode(int i) {
+		
+		for(int j=0; j<list.size(); j++) {
+			if(list.get(j).data == i) {
+				list.remove(list.get(j));
+				return true;
+			}
+		}
+		
+		
+		return false;
+		
 				
-			
-		
-		
-		
+	
 	}
 
 	public Node getHead() {
+		if(list.size() == 0) {
+			return null;
+		}
 		
 		return list.get(0);
 	}
 
 	public Node getTail() {
+		if(list.size() == 0) {
+			return null;
+		}
 		return list.get(list.size()-1);
 	}
 
