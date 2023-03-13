@@ -7,10 +7,10 @@ public class LinkedList {
     public static class Node {
 
         public int data;
+
         public Node(int data) {
             this.data = data;
         }
-
         @Override
         public boolean equals(Object o) {
             if (this == o) return true;
@@ -24,9 +24,9 @@ public class LinkedList {
             return Objects.hash(data);
         }
 
+
     }
     private Deque<Node> list = new ArrayDeque<>() ;
-
     public void addNode(int i) {
         list.add(new Node(i));
     }
@@ -53,5 +53,9 @@ public class LinkedList {
                 filter((Node node) -> node.data == i )
                 .findFirst()
                 .get();
+    }
+
+    public boolean isEmpty() {
+        return list.isEmpty();
     }
 }
