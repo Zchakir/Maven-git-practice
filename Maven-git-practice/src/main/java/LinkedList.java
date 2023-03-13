@@ -4,10 +4,10 @@ import java.util.Objects;
 
 public class LinkedList {
 
-    public static class Data{
-        public int data;
+    public static class Node {
 
-        public Data(int data) {
+        public int data;
+        public Node(int data) {
             this.data = data;
         }
 
@@ -15,7 +15,7 @@ public class LinkedList {
         public boolean equals(Object o) {
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
-            Data data1 = (Data) o;
+            Node data1 = (Node) o;
             return data == data1.data;
         }
 
@@ -23,12 +23,12 @@ public class LinkedList {
         public int hashCode() {
             return Objects.hash(data);
         }
-    }
 
-    private Deque<Data> list = new ArrayDeque<>() ;
+    }
+    private Deque<Node> list = new ArrayDeque<>() ;
 
     public void addNode(int i) {
-        list.add(new Data(i));
+        list.add(new Node(i));
     }
 
     public int size() {
@@ -36,15 +36,22 @@ public class LinkedList {
     }
 
     public void removeNode(int i) {
-        list.remove(new Data(i));
+        list.remove(new Node(i));
     }
 
 
-    public Data getHead() {
+    public Node getHead() {
         return list.getFirst();
     }
 
-    public Data getTail() {
+    public Node getTail() {
         return list.getLast();
+    }
+
+    public Node getNode(int i) {
+        return list.stream().
+                filter((Node node) -> node.data == i )
+                .findFirst()
+                .get();
     }
 }
