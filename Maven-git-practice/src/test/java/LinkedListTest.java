@@ -158,13 +158,13 @@ public class LinkedListTest {
         assertTrue(list.isEmpty());
     }
 //
-//    @Test
-//    public void testIsEmptyOnNonEmptyList() {
-//        LinkedList list = new LinkedList();
-//        list.addNode(5);
-//        assertFalse(list.isEmpty());
-//    }
-//
+    @Test
+    public void testIsEmptyOnNonEmptyList() {
+        LinkedList list = new LinkedList();
+        list.addNode(5);
+        assertFalse(list.isEmpty());
+    }
+
 //    @Test
 //    public void testClearList() {
 //        LinkedList list = new LinkedList();
