@@ -6,6 +6,10 @@ public class LinkedList {
         return ;
     }
 
+    int size() {
+        return this.size;
+    }
+
     void removeNode(int num) {
         --this.size;
     }
