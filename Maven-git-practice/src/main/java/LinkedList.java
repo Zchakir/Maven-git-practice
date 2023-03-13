@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LinkedList {
+	
 	List<Node> list = new ArrayList<>();
 	int size = 0;
 			
@@ -41,6 +42,11 @@ public class LinkedList {
 
 	public Node getTail() {
 		return list.get(list.size()-1);
+	}
+
+	public Node getNode(int i) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	

@@ -1,4 +1,5 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 
@@ -26,7 +27,7 @@ public class LinkedListTest {
         assertEquals(15, list.getTail().data);
     }
     
-    /* 
+    
 
     @Test
     public void testGetNode() {
@@ -38,6 +39,8 @@ public class LinkedListTest {
         assertNotNull(node);
         assertEquals(10, node.data);
     }
+    
+    /* 
 
     @Test
     public void testIsEmpty() {
