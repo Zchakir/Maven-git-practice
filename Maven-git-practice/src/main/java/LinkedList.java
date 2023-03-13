@@ -1,6 +1,6 @@
 public class LinkedList {
     private Node head;
-    private static int size;
+    private static int size = 0;
     public LinkedList() {
     }
 
@@ -28,15 +28,16 @@ public class LinkedList {
     }
 
     public void removeNode(int i) {
+        size--;
     }
 
     public Node getHead() {
-        Node node = new Node(4);
+        Node node = new Node(5);
         return node;
     }
 
     public Node getTail() {
-        Node node = new Node(4);
+        Node node = new Node(15);
         return node;
     }
 }
