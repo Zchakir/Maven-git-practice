@@ -45,7 +45,11 @@ public class LinkedList {
 	}
 
 	public Node getNode(int i) {
-		// TODO Auto-generated method stub
+		for(int j=0; j<list.size(); j++) {
+			if(list.get(j).data == i) {
+				return list.get(j);
+			}
+		}
 		return null;
 	}
 
