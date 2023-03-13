@@ -28,6 +28,13 @@ public class LinkedList {
     }
 
     public void removeNode(int i) {
+        Node node = this.head;
+        while(node.next != null){
+            if(node.next.data == i){
+                node.next = node.next.next;
+            }
+            node = node.next;
+        }
     }
 
     public Node getHead() {
