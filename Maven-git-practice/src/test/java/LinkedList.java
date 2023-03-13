@@ -72,4 +72,8 @@ public class LinkedList {
         }
         return current;
     }
+
+    public boolean isEmpty() {
+        return head==null?true:false;
+    }
 }
