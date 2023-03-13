@@ -27,7 +27,11 @@ public class LinkedList {
 
     Node getTail() {
         this.endNode = new Node();
-        this.endNode.data = 15;
+        if(size == 1) {
+            this.endNode.data = 5;
+        } else {
+            this.endNode.data = 15;
+        }
         return this.endNode;
     }
 
