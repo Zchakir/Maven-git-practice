@@ -13,7 +13,11 @@ public class LinkedList {
 
     public void addNode(int i) {
         Node node = new Node(i);
-        head = node;
+        if (isEmpty()) {
+            head = node;
+        } else {
+            Tail.next = node;
+        }
         Tail = node;
         size++;
     }
@@ -35,16 +39,47 @@ public class LinkedList {
     }
 
     public Node getNode(int i) {
-        return new Node(10);
+        int incriment =0;
+        Node node = head;
+        while(incriment != i){
+            node = node.next;
+            incriment++;
+        }
+        return node;
     }
 
     public boolean isEmpty() {
-        if(head == null){
+        if (head == null) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
+
+    public void addNodeAtIndex(int data, int index) {
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException("Index out of range");
+        }
+
+        Node newNode = new Node(data);
+        if (index == 0) {
+            newNode.next = head;
+            head = newNode;
+            if (Tail == null) {
+                Tail = newNode;
+            }
+        } else if (index == size) {
+            Tail.next = newNode;
+            Tail = newNode;
+        } else {
+            Node current = getNode(index - 1);
+            newNode.next = current.next;
+            current.next = newNode;
+        }
+
+        size++;
+    }
+
 }
 
 
