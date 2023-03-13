@@ -2,12 +2,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LinkedList {
-	List<Integer> list = new ArrayList<>();
+	List<Node> list = new ArrayList<>();
 	int size = 0;
 			
 	public void addNode(int i) {
-		list.add(i);
+		
+		Node n = new Node();
+		
+		n.data = i;
+	
 		size++;
+		
+		list.add(n);
+		
 		
 	}
 
@@ -28,11 +35,12 @@ public class LinkedList {
 	}
 
 	public Node getHead() {
-		return new Node();
+		
+		return list.get(0);
 	}
 
 	public Node getTail() {
-		return new Node();
+		return list.get(list.size()-1);
 	}
 
 	
