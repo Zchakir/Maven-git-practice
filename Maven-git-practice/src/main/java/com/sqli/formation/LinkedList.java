@@ -64,4 +64,8 @@ public class LinkedList {
         this.nodesArray = tmp.clone();
         return true;
     }
+
+    public void clear() {
+        this.nodesArray = new  Node[0];
+    }
 }

@@ -144,37 +144,37 @@ public class LinkedListTest {
         assertEquals(10, list.getNode(10).data);
     }
 
-//    @Test
-//    public void testGetNonExistingNode() {
-//        LinkedList list = new LinkedList();
-//        list.addNode(5);
-//        list.addNode(10);
-//        assertNull(list.getNode(15));
-//    }
+    @Test
+    public void testGetNonExistingNode() {
+        LinkedList list = new LinkedList();
+        list.addNode(5);
+        list.addNode(10);
+        assertNull(list.getNode(15));
+    }
 //
-//    @Test
-//    public void testIsEmptyOnEmptyList() {
-//        LinkedList list = new LinkedList();
-//        assertTrue(list.isEmpty());
-//    }
-//
-//    @Test
-//    public void testIsEmptyOnNonEmptyList() {
-//        LinkedList list = new LinkedList();
-//        list.addNode(5);
-//        assertFalse(list.isEmpty());
-//    }
-//
-//    @Test
-//    public void testClearList() {
-//        LinkedList list = new LinkedList();
-//        list.addNode(5);
-//        list.addNode(10);
-//        list.addNode(15);
-//        list.addNode(20);
-//        list.clear();
-//        assertEquals(0, list.size());
-//        assertNull(list.getHead());
-//        assertNull(list.getTail());
-//    }
+    @Test
+    public void testIsEmptyOnEmptyList() {
+        LinkedList list = new LinkedList();
+        assertTrue(list.isEmpty());
+    }
+
+    @Test
+    public void testIsEmptyOnNonEmptyList() {
+        LinkedList list = new LinkedList();
+        list.addNode(5);
+        assertFalse(list.isEmpty());
+    }
+
+    @Test
+    public void testClearList() {
+        LinkedList list = new LinkedList();
+        list.addNode(5);
+        list.addNode(10);
+        list.addNode(15);
+        list.addNode(20);
+        list.clear();
+        assertEquals(0, list.size());
+        assertNull(list.getHead());
+        assertNull(list.getTail());
+    }
 }
