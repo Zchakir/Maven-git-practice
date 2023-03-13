@@ -29,7 +29,7 @@ public class LinkedList {
     /* Given a key, deletes the first
        occurrence of key in
      * linked list */
-    void removeNode(int data)
+    boolean removeNode(int data)
     {
         // Store head node
         Node temp = head, prev = null;
@@ -37,7 +37,7 @@ public class LinkedList {
         // If head node itself holds the key to be deleted
         if (temp != null && temp.data == data) {
             head = temp.next; // Changed head
-            return;
+            return false;
         }
 
         // Search for the key to be deleted, keep track of
@@ -49,10 +49,11 @@ public class LinkedList {
 
         // If key was not present in linked list
         if (temp == null)
-            return;
+            return false;
 
         // Unlink the node from linked list
         prev.next = temp.next;
+        return true;
     }
     /*
     public void removeNode(int arg){
@@ -69,6 +70,9 @@ public class LinkedList {
 
     public Node getTail(){
         Node tail = this.head;
+        if(tail == null){
+            return null;
+        }
         while (tail.next != null) {
             tail = tail.next;
         }
@@ -95,4 +99,56 @@ public class LinkedList {
         }
         return count;
     }
+
+    public boolean isEmpty() {
+        if(this.head == null){
+            return true;
+        }
+        return false;
+    }
+
+    public boolean addNodeAtIndex(int data, int index) {
+        Node newNode = new Node(data);
+        if (index == 0) {
+            newNode.next = this.head;
+            this.head = newNode;
+            return false;
+        }
+
+        Node current = this.head;
+        for (int i = 0; i < index - 1; i++) {
+            if (current == null) {
+               // throw new IndexOutOfBoundsException("Index " + index + " out of bounds.");
+                return  false;
+            }
+            current = current.next;
+        }
+
+        newNode.next = current.next;
+        current.next = newNode;
+        return false;
+    }
+
+    public Node getNodeByIndex(int index) {
+        Node currentNode = this.head;
+        int counter = 0;
+
+        while (currentNode != null && counter < index) {
+            currentNode = currentNode.next;
+            counter++;
+        }
+
+        if (counter == index && currentNode != null) {
+            return currentNode;
+        } else {
+            return null;
+        }
+    }
+
+    public void clear() {
+        while (!this.isEmpty()) {
+            this.removeNode(this.getNodeByIndex(this.size()-1).data);
+        }
+    }
+
 }
