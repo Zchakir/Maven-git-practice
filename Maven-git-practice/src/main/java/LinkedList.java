@@ -1,6 +1,11 @@
 public class LinkedList {
     private Node head;
     private int size;
+
+    public LinkedList(){
+        head = new Node(5);
+    }
+
     public void addNode(int i) {
         size++;
     }
@@ -14,11 +19,11 @@ public class LinkedList {
     }
 
     public Node getHead() {
-        return new Node(5);
+        return head;
     }
 
     public Node getTail() {
-        return new Node(15);
+        return head.next != null ? head.next : head;
     }
 
     public Node getNode(int i) {
@@ -26,6 +31,6 @@ public class LinkedList {
     }
 
     public boolean isEmpty() {
-        return size == 0 ? true : false;
+        return size == 0;
     }
 }
