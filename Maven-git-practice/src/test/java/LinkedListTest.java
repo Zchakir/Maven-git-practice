@@ -102,7 +102,7 @@ public class LinkedListTest {
         assertEquals(5, list.getTail().data);
     }
     
-    /*
+
     
     
 
@@ -115,6 +115,7 @@ public class LinkedListTest {
         assertEquals(2, list.size());
     }
 
+    /*
     @Test
     public void testRemoveNodeFromEmptyList() {
         LinkedList list = new LinkedList();

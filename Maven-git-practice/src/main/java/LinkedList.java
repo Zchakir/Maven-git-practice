@@ -56,15 +56,19 @@ public class LinkedList {
 		
 	}
 
-	public void addNodeAtIndex(int i, int j) {
+	public boolean addNodeAtIndex(int i, int j) {
 		
-		Node n = new Node();
+		if(j<=list.size()) {
+			Node n = new Node();
 		
 		n.data = i;
 	
 		size++;
 		
 		list.add(j, n);
+		return true;
+		}
+		return false;
 		
 		
 	}
