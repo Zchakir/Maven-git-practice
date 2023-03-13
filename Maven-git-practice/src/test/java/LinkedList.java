@@ -1,5 +1,3 @@
-import java.util.List;
-
 public class LinkedList {
 
     Node head;
@@ -19,15 +17,15 @@ public class LinkedList {
             current.next = newNode;
         }
     }
-    public void removeNode(int value) {
+    public boolean removeNode(int value) {
         if (head == null) {
-            return;
+            return false;
         }
 
         // If head node contains the value, set the head to the next node
         if (head.data==value) {
             head = head.next;
-            return;
+            return true;
         }
 
         // Traverse the list and find the node to remove
@@ -35,10 +33,11 @@ public class LinkedList {
         while (current.next != null) {
             if (current.next.data==value) {
                 current.next = current.next.next;
-                return;
+                return true;
             }
             current = current.next;
         }
+        return true;
     }
     public int size() {
         int count = 0;
@@ -75,5 +74,28 @@ public class LinkedList {
 
     public boolean isEmpty() {
         return head==null?true:false;
+    }
+
+    public boolean addNodeAtIndex(int data, int index) {
+        Node<Integer> newNode = new Node<>(data);
+        if (index == 0) {
+            newNode.next = head;
+            head = newNode;
+        } else {
+            Node<Integer> current = head;
+            for (int i = 0; i < index - 1 && current != null; i++) {
+                current = current.next;
+            }
+            if (current == null) {
+               return false;
+            }
+            newNode.next = current.next;
+            current.next = newNode;
+        }
+        return true;
+    }
+
+    public void clear() {
+        this.head=null;
     }
 }
