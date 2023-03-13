@@ -1,6 +1,4 @@
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.Objects;
+import java.util.*;
 
 public class LinkedList {
 
@@ -11,6 +9,7 @@ public class LinkedList {
         public Node(int data) {
             this.data = data;
         }
+
         @Override
         public boolean equals(Object o) {
             if (this == o) return true;
@@ -18,7 +17,6 @@ public class LinkedList {
             Node data1 = (Node) o;
             return data == data1.data;
         }
-
         @Override
         public int hashCode() {
             return Objects.hash(data);
@@ -26,7 +24,7 @@ public class LinkedList {
 
 
     }
-    private Deque<Node> list = new ArrayDeque<>() ;
+    private Vector<Node> list = new Vector<>() ;
     public void addNode(int i) {
         list.add(new Node(i));
     }
@@ -41,11 +39,11 @@ public class LinkedList {
 
 
     public Node getHead() {
-        return list.getFirst();
+        return list.firstElement();
     }
 
     public Node getTail() {
-        return list.getLast();
+        return list.lastElement();
     }
 
     public Node getNode(int i) {
@@ -57,5 +55,9 @@ public class LinkedList {
 
     public boolean isEmpty() {
         return list.isEmpty();
+    }
+
+    public void addNodeAtIndex(int i, int i1) {
+        list.add(i1, new Node(i));
     }
 }

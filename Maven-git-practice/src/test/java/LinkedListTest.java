@@ -42,39 +42,39 @@ public class LinkedListTest {
         list.addNode(5);
         assertFalse(list.isEmpty());
     }
-//    @Test
-//    public void testAddNodeToEmptyList() {
-//        LinkedList list = new LinkedList();
-//        list.addNode(5);
-//        assertEquals(1, list.size());
-//        assertEquals(5, list.getHead().data);
-//        assertEquals(5, list.getTail().data);
-//    }
-//
-//    @Test
-//    public void testAddNodeToNonEmptyList() {
-//        LinkedList list = new LinkedList();
-//        list.addNode(5);
-//        list.addNode(10);
-//        list.addNode(15);
-//        list.addNode(20);
-//        assertEquals(4, list.size());
-//        assertEquals(5, list.getHead().data);
-//        assertEquals(20, list.getTail().data);
-//    }
-//
-//    @Test
-//    public void testAddNodeAtIndex() {
-//        LinkedList list = new LinkedList();
-//        list.addNode(5);
-//        list.addNode(10);
-//        list.addNode(20);
-//        list.addNodeAtIndex(15, 2);
-//        assertEquals(4, list.size());
-//        assertEquals(5, list.getHead().data);
-//        assertEquals(20, list.getTail().data);
-//        assertEquals(15, list.getNode(2).data);
-//    }
+    @Test
+    public void testAddNodeToEmptyList() {
+        LinkedList list = new LinkedList();
+        list.addNode(5);
+        assertEquals(1, list.size());
+        assertEquals(5, list.getHead().data);
+        assertEquals(5, list.getTail().data);
+    }
+
+    @Test
+    public void testAddNodeToNonEmptyList() {
+        LinkedList list = new LinkedList();
+        list.addNode(5);
+        list.addNode(10);
+        list.addNode(15);
+        list.addNode(20);
+        assertEquals(4, list.size());
+        assertEquals(5, list.getHead().data);
+        assertEquals(20, list.getTail().data);
+    }
+
+    @Test
+    public void testAddNodeAtIndex() {
+        LinkedList list = new LinkedList();
+        list.addNode(5);
+        list.addNode(10);
+        list.addNode(20);
+        list.addNodeAtIndex(15, 2);
+        assertEquals(4, list.size());
+        assertEquals(5, list.getHead().data);
+        assertEquals(20, list.getTail().data);
+        assertEquals(15, list.getNode(15).data);
+    }
 //
 //    @Test
 //    public void testAddNodeAtIndexToEmptyList() {
