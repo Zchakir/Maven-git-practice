@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b055df42-3d6f-4ef4-91f8-2b983e6b7a9d" name="Changes" comment="testAddNode">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Data.java" afterDir="false" />
+    <list default="true" id="b055df42-3d6f-4ef4-91f8-2b983e6b7a9d" name="Changes" comment="testRemoveNode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/LinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LinkedListTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/LinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/LinkedList.class" afterDir="false" />
@@ -52,7 +52,8 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -70,6 +71,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LinkedListTest.testAddNode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Maven-git-practice" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LinkedListTest" />
+      <option name="METHOD_NAME" value="testAddNode" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LinkedListTest.testRemoveNode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Maven-git-practice" />
       <option name="PACKAGE_NAME" value="" />
@@ -83,6 +94,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.LinkedListTest" />
+        <item itemvalue="JUnit.LinkedListTest.testAddNode" />
         <item itemvalue="JUnit.LinkedListTest.testRemoveNode" />
       </list>
     </recent_temporary>
@@ -110,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678718127551</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="testRemoveNode">
+      <created>1678720013384</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678720013384</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,6 +145,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="testAddNode" />
-    <option name="LAST_COMMIT_MESSAGE" value="testAddNode" />
+    <MESSAGE value="testRemoveNode" />
+    <option name="LAST_COMMIT_MESSAGE" value="testRemoveNode" />
   </component>
 </project>
