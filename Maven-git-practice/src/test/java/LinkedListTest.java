@@ -144,13 +144,13 @@ public class LinkedListTest {
         assertEquals(10, list.getNode(10).data);
     }
 //
-//    @Test
-//    public void testGetNonExistingNode() {
-//        LinkedList list = new LinkedList();
-//        list.addNode(5);
-//        list.addNode(10);
-//        assertNull(list.getNode(15));
-//    }
+    @Test
+    public void testGetNonExistingNode() {
+        LinkedList list = new LinkedList();
+        list.addNode(5);
+        list.addNode(10);
+        assertNull(list.getNode(15));
+    }
 //
 //    @Test
 //    public void testIsEmptyOnEmptyList() {
