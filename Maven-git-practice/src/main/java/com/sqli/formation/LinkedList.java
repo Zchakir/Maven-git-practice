@@ -12,7 +12,7 @@ public class LinkedList {
     }
 
     public int size() {
-        return 2;
+        return list.size();
     }
 
     public void removeNode(int i) {
