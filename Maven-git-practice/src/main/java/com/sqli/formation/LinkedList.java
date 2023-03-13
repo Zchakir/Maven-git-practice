@@ -2,6 +2,8 @@ package com.sqli.formation;
 
 
 
+import com.sqli.formation.Node;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,15 +24,20 @@ public class LinkedList {
         list.remove(Integer.valueOf(i));
     }
 
-    public Object getHead() {
-        return this.list.get(0);
+    public Node getHead() {
+        Node node = new com.sqli.formation.Node(this.list.get(0));
+        return node;
     }
 
-    public Object getTail() {
-        return list.get(list.size()-1);
+    public Node getTail() {
+        Node node = new com.sqli.formation.Node(this.list.get(this.list.size()-1));
+        return node;
 
 
     }
 
 
+    public Node getNode(int i) {
+        return new Node(i);
+    }
 }
