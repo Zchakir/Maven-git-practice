@@ -61,4 +61,21 @@ public class LinkedList {
     public boolean isEmpty(){
         return size() == 0;
     }
+
+
+    public void addNodeAtIndex(int nodeValue, int index) {
+        Node node = this.head;
+        int currentIndex = 0;
+        while(node.next != null){
+            if(currentIndex + 1 == index){
+                Node nodeToInsert = new Node();
+                nodeToInsert.data = nodeValue;
+                nodeToInsert.next = node.next;
+                node.next = nodeToInsert;
+                return;
+            }
+            currentIndex++;
+            node = node.next;
+        }
+    }
 }
