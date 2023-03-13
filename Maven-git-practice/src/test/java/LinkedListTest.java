@@ -36,14 +36,15 @@ public class LinkedListTest {
         assertNotNull(node);
         assertEquals(10, node.data);
     }
-//
-//    @Test
-//    public void testIsEmpty() {
-//        LinkedList list = new LinkedList();
-//        assertTrue(list.isEmpty());
-//        list.addNode(5);
-//        assertFalse(list.isEmpty());
-//    }
+
+    @Test
+    public void testIsEmpty() {
+        LinkedList list = new LinkedList();
+        assertTrue(list.isEmpty());
+        list.addNode(5);
+        assertFalse(list.isEmpty());
+    }
+
 //    @Test
 //    public void testAddNodeToEmptyList() {
 //        LinkedList list = new LinkedList();
