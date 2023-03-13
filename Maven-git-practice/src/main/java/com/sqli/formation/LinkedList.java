@@ -14,6 +14,7 @@ public class LinkedList {
     public void addNode(int i) {
         Node node = new Node(i);
         head = node;
+        Tail = node;
         size++;
     }
 
@@ -26,11 +27,11 @@ public class LinkedList {
     }
 
     public Node getHead() {
-        return new Node(5);
+        return head;
     }
 
     public Node getTail() {
-        return new Node(15);
+        return Tail;
     }
 
     public Node getNode(int i) {
