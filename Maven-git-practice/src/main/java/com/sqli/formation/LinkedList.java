@@ -16,13 +16,24 @@ public class LinkedList {
         return list.size();
     }
 
-    public void removeNode(int i) {
+    public boolean removeNode(int i) {
+        for (Node node :list){
+            if (node.data == i){
+                list.remove(node);
+            }
+            return true;
+        }
+        return false;
     }
 
 
     public Node getHead() {
+        try {
+            return list.get(0);
+        }catch (Exception e){
+            return null;
+        }
 
-        return list.get(0);
     }
 
     public Node getTail() {
