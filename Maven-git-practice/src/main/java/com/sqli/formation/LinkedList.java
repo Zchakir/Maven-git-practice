@@ -56,9 +56,9 @@ public class LinkedList {
         }
     }
 
-    public void addNodeAtIndex(int data, int index) {
+    public boolean addNodeAtIndex(int data, int index) {
         if (index < 0 || index > size) {
-            throw new IndexOutOfBoundsException("Index out of range");
+            return false;
         }
 
         Node newNode = new Node(data);
@@ -78,6 +78,7 @@ public class LinkedList {
         }
 
         size++;
+        return true;
     }
 
 }
