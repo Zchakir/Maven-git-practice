@@ -92,7 +92,7 @@ public class LinkedListTest {
     }
     
     
-    /*
+    
     @Test
     public void testAddNodeAtIndexToEmptyList() {
         LinkedList list = new LinkedList();
@@ -101,6 +101,8 @@ public class LinkedListTest {
         assertEquals(5, list.getHead().data);
         assertEquals(5, list.getTail().data);
     }
+    
+    /*
     
     
 
