@@ -54,8 +54,11 @@ public class LinkedList {
 	}
 
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return true;
+		if(list.size()==0) {
+			return true;
+		}
+		return false;
+		
 	}
 
 	
