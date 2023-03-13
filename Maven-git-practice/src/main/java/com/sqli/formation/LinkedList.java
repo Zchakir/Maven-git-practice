@@ -6,10 +6,10 @@ public class LinkedList {
     public void addNode(int i) {
         Node node = new Node();
         node.data = i;
-        if(head == null)
-            head = node;
+        if(this.head == null)
+            this.head = node;
         else{
-            Node last = head;
+            Node last = this.head;
             while(last.next != null){
                 last = last.next;
             }
@@ -18,7 +18,13 @@ public class LinkedList {
     }
 
     public int size() {
-        return 3;
+        int size = 0;
+        Node node = head;
+        while(node != null){
+            size++;
+            node = node.next;
+        }
+        return size;
     }
 
     public void removeNode(int i) {
