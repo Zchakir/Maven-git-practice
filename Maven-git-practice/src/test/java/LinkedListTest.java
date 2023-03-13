@@ -51,7 +51,7 @@ public class LinkedListTest {
         assertEquals(5, list.getTail().data);
     }
 
-    /*@Test
+    @Test
     public void testAddNodeToNonEmptyList() {
         LinkedList list = new LinkedList();
         list.addNode(5);
@@ -62,7 +62,7 @@ public class LinkedListTest {
         assertEquals(5, list.getHead().data);
         assertEquals(20, list.getTail().data);
     }
-
+    /*
     @Test
     public void testAddNodeAtIndex() {
         LinkedList list = new LinkedList();

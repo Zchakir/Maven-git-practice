@@ -2,11 +2,18 @@ public class LinkedList {
     private Node head;
     private int size;
 
-    public LinkedList(){
-        head = new Node(5);
-    }
-
     public void addNode(int i) {
+        if(head == null) head = new Node(i);
+        else if (head.next == null) {
+            head.next = new Node(i);
+        }
+        else {
+            Node tail = head.next;
+            while (tail.next != null) {
+                tail = tail.next;
+            }
+            tail.next = new Node(i);
+        }
         size++;
     }
 
@@ -23,7 +30,14 @@ public class LinkedList {
     }
 
     public Node getTail() {
-        return head.next != null ? head.next : head;
+        Node tail = head;
+        if (head.next != null) {
+            tail.next = head.next;
+            while (tail.next != null) {
+                tail = tail.next;
+            }
+        }
+        return tail;
     }
 
     public Node getNode(int i) {
