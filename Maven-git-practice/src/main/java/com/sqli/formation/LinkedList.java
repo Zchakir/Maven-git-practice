@@ -37,6 +37,7 @@ public class LinkedList {
         }
     }
 
+
     public Node getHead() {
         return this.head;
     }
@@ -46,5 +47,14 @@ public class LinkedList {
             node = node.next;
         }
         return node;
+    }
+
+    public Node getNode(int i) {
+       Node node = head;
+       while(node.next != null){
+           if(node.data == i) return node;
+           node = node.next;
+       }
+       return null;
     }
 }

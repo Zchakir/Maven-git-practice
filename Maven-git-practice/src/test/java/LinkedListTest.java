@@ -1,4 +1,5 @@
 import com.sqli.formation.LinkedList;
+import com.sqli.formation.Node;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -25,16 +26,16 @@ public class LinkedListTest {
         assertEquals(15, list.getTail().data);
     }
 
-//    @Test
-//    public void testGetNode() {
-//        LinkedList list = new LinkedList();
-//        list.addNode(5);
-//        list.addNode(10);
-//        list.addNode(15);
-//        Node node = list.getNode(10);
-//        assertNotNull(node);
-//        assertEquals(10, node.data);
-//    }
+    @Test
+    public void testGetNode() {
+        LinkedList list = new LinkedList();
+        list.addNode(5);
+        list.addNode(10);
+        list.addNode(15);
+        Node node = list.getNode(10);
+        assertNotNull(node);
+        assertEquals(10, node.data);
+    }
 //
 //    @Test
 //    public void testIsEmpty() {
