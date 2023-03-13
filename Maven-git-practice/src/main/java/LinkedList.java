@@ -1,6 +1,7 @@
 public class LinkedList {
 
-    private int size;
+    private Node startNode;
+    private int size = 3;
 
     void addNode(int num) {
         return ;
@@ -13,6 +14,4 @@ public class LinkedList {
     void removeNode(int num) {
         --this.size;
     }
-
-
 }
