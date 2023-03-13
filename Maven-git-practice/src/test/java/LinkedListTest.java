@@ -78,15 +78,15 @@ public class LinkedListTest {
         assertEquals(20, list.getTail().data);
         assertEquals(15, list.getNode(15).data);
     }
-//
-//    @Test
-//    public void testAddNodeAtIndexToEmptyList() {
-//        LinkedList list = new LinkedList();
-//        list.addNodeAtIndex(5, 0);
-//        assertEquals(1, list.size());
-//        assertEquals(5, list.getHead().data);
-//        assertEquals(5, list.getTail().data);
-//    }
+
+    @Test
+    public void testAddNodeAtIndexToEmptyList() {
+        LinkedList list = new LinkedList();
+        list.addNodeAtIndex(5, 0);
+        assertEquals(1, list.size());
+        assertEquals(5, list.getHead().data);
+        assertEquals(5, list.getTail().data);
+    }
 //
 //    @Test
 //    public void testAddNodeAtInvalidIndex() {

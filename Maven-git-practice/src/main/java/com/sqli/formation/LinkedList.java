@@ -64,12 +64,16 @@ public class LinkedList {
 
 
     public void addNodeAtIndex(int nodeValue, int index) {
+        Node nodeToInsert = new Node();
+        nodeToInsert.data = nodeValue;
+        if(isEmpty()){
+            this.head = nodeToInsert;
+            return;
+        }
         Node node = this.head;
         int currentIndex = 0;
         while(node.next != null){
             if(currentIndex + 1 == index){
-                Node nodeToInsert = new Node();
-                nodeToInsert.data = nodeValue;
                 nodeToInsert.next = node.next;
                 node.next = nodeToInsert;
                 return;
