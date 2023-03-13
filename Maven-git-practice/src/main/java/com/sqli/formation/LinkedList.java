@@ -38,4 +38,12 @@ public class LinkedList {
         return new Node(15);
 
     }
+
+    public Node getNode(int i) {
+        return new Node(10);
+    }
+
+    public boolean isEmpty() {
+        return this.nodesArray.length == 0;
+    }
 }
