@@ -1,6 +1,8 @@
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import org.junit.Assert;
+
 public class LinkedListTest {
 
     @Test
@@ -73,7 +75,7 @@ public class LinkedListTest {
         assertEquals(4, list.size());
         assertEquals(5, list.getHead().data);
         assertEquals(20, list.getTail().data);
-        assertEquals(15, list.getNode(2).data);
+        assertEquals(15, list.getNode(Integer.valueOf(2)).data);
     }
 
     @Test
