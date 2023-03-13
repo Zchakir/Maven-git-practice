@@ -24,8 +24,8 @@ public class LinkedListTest {
         list.addNode(15);
         list.removeNode(10);
         assertEquals(2, list.size());
-        assertEquals(5, list.getHead());
-        assertEquals(15, list.getTail());
+        assertEquals(5, list.getHead().data);
+        assertEquals(15, list.getTail().data);
     }
 
     @Test
@@ -52,8 +52,8 @@ public class LinkedListTest {
         LinkedList list = new LinkedList();
         list.addNode(5);
         assertEquals(1, list.size());
-        assertEquals(5, list.getHead());
-        assertEquals(5, list.getTail());
+        assertEquals(5, list.getHead().data);
+        assertEquals(5, list.getTail().data);
     }
 
     @Test
@@ -64,10 +64,10 @@ public class LinkedListTest {
         list.addNode(15);
         list.addNode(20);
         assertEquals(4, list.size());
-        assertEquals(5, list.getHead());
-        assertEquals(20, list.getTail());
+        assertEquals(5, list.getHead().data);
+        assertEquals(20, list.getTail().data);
     }
- /*
+
     @Test
     public void testAddNodeAtIndex() {
         LinkedList list = new LinkedList();
@@ -89,7 +89,7 @@ public class LinkedListTest {
         assertEquals(5, list.getHead().data);
         assertEquals(5, list.getTail().data);
     }
-
+/*
     @Test
     public void testAddNodeAtInvalidIndex() {
         LinkedList list = new LinkedList();

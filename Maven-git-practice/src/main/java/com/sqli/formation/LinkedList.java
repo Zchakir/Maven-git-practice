@@ -6,9 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LinkedList {
-    public List<Integer> list = new ArrayList<Integer>();
+    public List<Node> list = new ArrayList<Node>();
     public void addNode(int i) {
-        list.add(i);
+        Node node = new Node(i);
+        list.add(node);
     }
 
     public int size() {
@@ -19,19 +20,23 @@ public class LinkedList {
     }
 
 
-    public Integer getHead() {
+    public Node getHead() {
 
         return list.get(0);
     }
 
-    public Object getTail() {
+    public Node getTail() {
         return list.get(list.size() -1);
     }
 
 
     public Node getNode(int i) {
-        Node node = new Node(i);
-        return  node;
+    for (Node node : list){
+        if (node.data == i){
+            return node;
+        }
+    }
+     return  list.get(i);
     }
 
     public boolean isEmpty() {
@@ -39,5 +44,10 @@ public class LinkedList {
             return true;
         }
         return false;
+    }
+
+    public void addNodeAtIndex(int i, int index) {
+        list.add(index,new Node(i));
+
     }
 }

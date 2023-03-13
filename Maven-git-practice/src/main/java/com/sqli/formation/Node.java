@@ -5,4 +5,5 @@ public class Node {
     public Node(Integer integer) {
     this.data= integer;
     }
+
 }
