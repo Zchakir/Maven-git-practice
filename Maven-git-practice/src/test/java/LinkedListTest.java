@@ -35,7 +35,7 @@ public class LinkedListTest {
         assertNotNull(node);
         assertEquals(10, node.data);
     }
-/*
+
     @Test
     public void testIsEmpty() {
         LinkedList list = new LinkedList();
@@ -43,7 +43,7 @@ public class LinkedListTest {
         list.addNode(5);
         assertFalse(list.isEmpty());
     }
-    @Test
+/*    @Test
     public void testAddNodeToEmptyList() {
         LinkedList list = new LinkedList();
         list.addNode(5);

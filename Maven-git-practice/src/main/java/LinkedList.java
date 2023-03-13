@@ -4,9 +4,10 @@ public class LinkedList {
 
     private Node endNode;
 
-    private int size = 3;
+    private int size = 0;
 
     void addNode(int num) {
+        ++this.size;
         return ;
     }
 
@@ -34,5 +35,9 @@ public class LinkedList {
         Node node = new Node();
         node.data = 10;
         return node;
+    }
+
+    boolean isEmpty() {
+        return this.size == 0;
     }
 }
