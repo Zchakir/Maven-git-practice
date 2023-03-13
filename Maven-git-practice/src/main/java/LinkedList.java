@@ -41,4 +41,8 @@ public class LinkedList {
         return  new Node(i);
 
     }
+
+    public boolean isEmpty() {
+        return this.nodeList.size()==0?true:false;
+    }
 }
