@@ -10,10 +10,11 @@ import java.util.List;
 public class LinkedList {
     int size;
 
-    List<Integer> list = new ArrayList<>();
+    List<Node> list = new ArrayList<>();
 
     public void addNode(int i) {
-        list.add(i);
+        Node node = new Node(i);
+        list.add(node);
     }
 
     public int size() {
@@ -21,17 +22,16 @@ public class LinkedList {
     }
 
     public void removeNode(int i) {
-        list.remove(Integer.valueOf(i));
+        Node node = new Node(i);
+        this.list.remove(node);
     }
 
     public Node getHead() {
-        Node node = new com.sqli.formation.Node(this.list.get(0));
-        return node;
+        return list.get(0);
     }
 
     public Node getTail() {
-        Node node = new com.sqli.formation.Node(this.list.get(this.list.size()-1));
-        return node;
+        return list.get(list.size() - 1);
 
 
     }
@@ -39,5 +39,13 @@ public class LinkedList {
 
     public Node getNode(int i) {
         return new Node(i);
+    }
+
+    public boolean isEmpty() {
+        if (this.list.size() == 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
