@@ -33,31 +33,47 @@ public class LinkedList {
         return list.size();
     }
 
-    public void removeNode(int i) {
-        list.remove(new Node(i));
-    }
-
 
     public Node getHead() {
-        return list.firstElement();
+        if(!list.isEmpty())
+            return list.firstElement();
+        return null;
     }
 
     public Node getTail() {
-        return list.lastElement();
+        if(!list.isEmpty())
+            return list.lastElement();
+        return null;
     }
 
     public Node getNode(int i) {
         return list.stream().
                 filter((Node node) -> node.data == i )
                 .findFirst()
-                .get();
+                .orElse(null);
     }
 
     public boolean isEmpty() {
         return list.isEmpty();
     }
 
-    public void addNodeAtIndex(int i, int i1) {
-        list.add(i1, new Node(i));
+    public boolean addNodeAtIndex(int i, int i1) {
+        try {
+            list.add(i1, new Node(i));
+            return true;
+        }catch (IndexOutOfBoundsException e){
+            return false;
+        }
+    }
+
+    public boolean removeNode(int i) {
+            if(!list.isEmpty() && list.contains(new Node(i))){
+
+                list.remove(new Node(i));
+                return true;
+            }
+            return false;
+
+
     }
 }

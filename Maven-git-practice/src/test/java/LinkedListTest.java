@@ -75,72 +75,72 @@ public class LinkedListTest {
         assertEquals(20, list.getTail().data);
         assertEquals(15, list.getNode(15).data);
     }
-//
-//    @Test
-//    public void testAddNodeAtIndexToEmptyList() {
-//        LinkedList list = new LinkedList();
-//        list.addNodeAtIndex(5, 0);
-//        assertEquals(1, list.size());
-//        assertEquals(5, list.getHead().data);
-//        assertEquals(5, list.getTail().data);
-//    }
-//
-//    @Test
-//    public void testAddNodeAtInvalidIndex() {
-//        LinkedList list = new LinkedList();
-//        list.addNode(5);
-//        list.addNode(10);
-//        assertFalse(list.addNodeAtIndex(15, 5));
-//        assertEquals(2, list.size());
-//    }
-//
-//    @Test
-//    public void testRemoveNodeFromEmptyList() {
-//        LinkedList list = new LinkedList();
-//        assertFalse(list.removeNode(5));
-//        assertEquals(0, list.size());
-//        assertNull(list.getHead());
-//        assertNull(list.getTail());
-//    }
-//
-//    @Test
-//    public void testRemoveNodeFromNonEmptyList() {
-//        LinkedList list = new LinkedList();
-//        list.addNode(5);
-//        list.addNode(10);
-//        list.addNode(15);
-//        list.addNode(20);
-//        assertTrue(list.removeNode(15));
-//        assertEquals(3, list.size());
-//        assertEquals(5, list.getHead().data);
-//        assertEquals(20, list.getTail().data);
-//    }
-//
-//    @Test
-//    public void testRemoveNonExistingNode() {
-//        LinkedList list = new LinkedList();
-//        list.addNode(5);
-//        list.addNode(10);
-//        assertFalse(list.removeNode(15));
-//        assertEquals(2, list.size());
-//        assertEquals(5, list.getHead().data);
-//        assertEquals(10, list.getTail().data);
-//    }
-//
-//    @Test
-//    public void testGetNodeFromEmptyList() {
-//        LinkedList list = new LinkedList();
-//        assertNull(list.getNode(5));
-//    }
-//
-//    @Test
-//    public void testGetNodeFromNonEmptyList() {
-//        LinkedList list = new LinkedList();
-//        list.addNode(5);
-//        list.addNode(10);
-//        list.addNode(15);
-//        assertEquals(10, list.getNode(10).data);
-//    }
+
+    @Test
+    public void testAddNodeAtIndexToEmptyList() {
+        LinkedList list = new LinkedList();
+        list.addNodeAtIndex(5, 0);
+        assertEquals(1, list.size());
+        assertEquals(5, list.getHead().data);
+        assertEquals(5, list.getTail().data);
+    }
+
+    @Test
+    public void testAddNodeAtInvalidIndex() {
+        LinkedList list = new LinkedList();
+        list.addNode(5);
+        list.addNode(10);
+        assertFalse(list.addNodeAtIndex(15, 5));
+        assertEquals(2, list.size());
+    }
+
+    @Test
+    public void testRemoveNodeFromEmptyList() {
+        LinkedList list = new LinkedList();
+        assertFalse(list.removeNode(5));
+        assertEquals(0, list.size());
+        assertNull(list.getHead());
+        assertNull(list.getTail());
+    }
+
+    @Test
+    public void testRemoveNodeFromNonEmptyList() {
+        LinkedList list = new LinkedList();
+        list.addNode(5);
+        list.addNode(10);
+        list.addNode(15);
+        list.addNode(20);
+        assertTrue(list.removeNode(15));
+        assertEquals(3, list.size());
+        assertEquals(5, list.getHead().data);
+        assertEquals(20, list.getTail().data);
+    }
+
+    @Test
+    public void testRemoveNonExistingNode() {
+        LinkedList list = new LinkedList();
+        list.addNode(5);
+        list.addNode(10);
+        assertFalse(list.removeNode(15));
+        assertEquals(2, list.size());
+        assertEquals(5, list.getHead().data);
+        assertEquals(10, list.getTail().data);
+    }
+
+    @Test
+    public void testGetNodeFromEmptyList() {
+        LinkedList list = new LinkedList();
+        assertNull(list.getNode(5));
+    }
+
+    @Test
+    public void testGetNodeFromNonEmptyList() {
+        LinkedList list = new LinkedList();
+        list.addNode(5);
+        list.addNode(10);
+        list.addNode(15);
+        assertEquals(10, list.getNode(10).data);
+    }
 //
 //    @Test
 //    public void testGetNonExistingNode() {
