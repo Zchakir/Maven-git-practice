@@ -54,8 +54,14 @@ public class LinkedList {
     }
 
     public Node getNode(int i) {
-        Node node = new Node(10);
-        System.out.println("test");
-        return node;
+        Node currentNode = head;
+        while (currentNode.getData() != i) {
+            currentNode = currentNode.getNext();
+        }
+        return currentNode;
+    }
+
+    public boolean isEmpty() {
+        return size == 0 ? true : false;
     }
 }
