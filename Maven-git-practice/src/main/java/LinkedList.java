@@ -6,4 +6,8 @@ public class LinkedList {
     public int size() {
         return 0;
     }
+
+    public void removeNode(int i) {
+
+    }
 }
