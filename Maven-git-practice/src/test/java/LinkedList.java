@@ -35,25 +35,44 @@ public class LinkedList {
 			precedent_node=current_node;
 			current_node=current_node.next;
 		}
-		precedent_node.next=current_node.next;
+		if(current_node.data==i) {
+			precedent_node.next=current_node.next;
+		}
+		
 	}
 
 	public Node getHead() {
-		Node node=new Node();
-		node.data=5;
-		return node;
+		return this.head;
 	}
 
 	public Node getTail() {
-		Node node=new Node();
-		node.data=15;
-		return node;
+		Node current_node=this.head;
+		while(current_node.next!=null) {
+			current_node=current_node.next;
+		}
+		return current_node;
 	}
 
 	public Node getNode(int i) {
-		Node new_node=new Node();
-		new_node.data=10;
-		return new_node;
+		Node current_node=this.head;
+		while(current_node.data!=i && current_node.next!=null) {
+			current_node=current_node.next;
+		}
+		if(current_node.data==i) {
+			return current_node;
+		}
+		return null;
 	}
+
+	public boolean isEmpty() {
+		
+		return this.head==null;
+	}
+
+	public void addNodeAtIndex(int i, int j) {
+		
+		
+	}
+	
 
 }
