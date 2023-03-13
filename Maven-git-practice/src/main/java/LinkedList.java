@@ -58,6 +58,10 @@ public class LinkedList {
 	}
 
 	public Node getNode(int i) {
+		
+		if(i>list.size()) {
+			return null;
+		}
 		return list.get(i);
 	}
 
@@ -83,6 +87,12 @@ public class LinkedList {
 		}
 		return false;
 		
+		
+	}
+
+	public void clear() {
+		// TODO Auto-generated method stub
+		list.clear();
 		
 	}
 
