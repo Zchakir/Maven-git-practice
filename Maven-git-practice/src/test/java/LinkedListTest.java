@@ -1,3 +1,4 @@
+import Node.Node;
 import org.junit.Test;
 import com.sqli.LinkedList;
 
@@ -14,7 +15,7 @@ public class LinkedListTest {
         assertEquals(3, list.size());
     }
 
-   /* @Test
+    @Test
     public void testRemoveNode() {
         LinkedList list = new LinkedList();
         list.addNode(5);
@@ -37,14 +38,14 @@ public class LinkedListTest {
         assertEquals(10, node.data);
     }
 
-    @Test
+ /*   @Test
     public void testIsEmpty() {
         LinkedList list = new LinkedList();
         assertTrue(list.isEmpty());
         list.addNode(5);
         assertFalse(list.isEmpty());
     }
-    @Test
+   @Test
     public void testAddNodeToEmptyList() {
         LinkedList list = new LinkedList();
         list.addNode(5);
