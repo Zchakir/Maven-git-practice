@@ -41,10 +41,11 @@ public class LinkedList {
 
     }
 
-    public Node getNode(int index) {
-        if (index == 5)
-            return null;
-        return this.nodesArray[index];
+    public Node getNode(int value) {
+        for (int i = 0; i < this.nodesArray.length; i++)
+            if (this.nodesArray[i].data == value)
+                return this.nodesArray[i];
+        return null;
     }
 
     public boolean isEmpty() {
