@@ -24,4 +24,8 @@ public class LinkedList {
     public Node getNode(int i) {
         return new Node(10);
     }
+
+    public boolean isEmpty() {
+        return size == 0 ? true : false;
+    }
 }
