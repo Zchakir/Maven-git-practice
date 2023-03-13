@@ -46,8 +46,15 @@ public class LinkedList {
         return false;
     }
 
-    public void addNodeAtIndex(int i, int index) {
-        list.add(index,new Node(i));
+    public boolean addNodeAtIndex(int i, int index) {
+        try{
+            Node node = new Node(i);
+            list.add(index,node);
+            return true;
+        }catch (Exception e){
+            return false;
+        }
+
 
     }
 }
