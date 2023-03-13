@@ -1,16 +1,15 @@
 package com.sqli.formation;
 
 public class Node {
-    private int data;
+    public int data;
     private Node next;
+    private Node previous;
 
-    public void setData(int data) {
+    public Node(int data){
         this.data = data;
+        this.next = this.previous = null;
     }
 
-    public int getData() {
-        return data;
-    }
 
     public void setNext(Node next) {
         this.next = next;
@@ -18,5 +17,13 @@ public class Node {
 
     public Node getNext() {
         return next;
+    }
+
+    public Node getPrevious() {
+        return previous;
+    }
+
+    public void setPrevious(Node previous) {
+        this.previous = previous;
     }
 }
