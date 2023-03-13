@@ -65,6 +65,9 @@ public class LinkedList {
 
     public Node getNode(int i) {
         Node<Integer> current = this.head;
+        if(current==null){
+            return null;
+        }
         while (current.data!=i) {
 
             current = current.next;
