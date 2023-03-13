@@ -95,15 +95,15 @@ public class LinkedListTest {
         assertFalse(list.addNodeAtIndex(15, 5));
         assertEquals(2, list.size());
     }
-//
-//    @Test
-//    public void testRemoveNodeFromEmptyList() {
-//        LinkedList list = new LinkedList();
-//        assertFalse(list.removeNode(5));
-//        assertEquals(0, list.size());
-//        assertNull(list.getHead());
-//        assertNull(list.getTail());
-//    }
+
+    @Test
+    public void testRemoveNodeFromEmptyList() {
+        LinkedList list = new LinkedList();
+        assertFalse(list.removeNode(5));
+        assertEquals(0, list.size());
+        assertNull(list.getHead());
+        assertNull(list.getTail());
+    }
 //
 //    @Test
 //    public void testRemoveNodeFromNonEmptyList() {

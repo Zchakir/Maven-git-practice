@@ -14,7 +14,10 @@ public class LinkedList {
         return nodesArray.length;
     }
 
-    public void removeNode(int value) {
+    public boolean removeNode(int value) {
+//        if (this.isEmpty())
+//            return false;
+
         int k  = -1;
         for (int j = 0; j < nodesArray.length; j++)
             if (nodesArray[j].data == value)
@@ -27,15 +30,17 @@ public class LinkedList {
                 tmp[j-1] = nodesArray[j];
             nodesArray = tmp.clone();
         }
+
+        return false;
     }
 
 
     public Node getHead() {
-        return new Node(5);
+        return this.isEmpty() ? null : this.nodesArray[0];
     }
 
     public Node getTail() {
-        return this.nodesArray[nodesArray.length - 1];
+        return this.isEmpty() ? null : this.nodesArray[nodesArray.length - 1];
 
     }
 
