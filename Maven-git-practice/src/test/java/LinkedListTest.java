@@ -1,4 +1,5 @@
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 public class LinkedListTest {
@@ -42,6 +43,7 @@ public class LinkedListTest {
         list.addNode(5);
         assertFalse(list.isEmpty());
     }
+
     @Test
     public void testAddNodeToEmptyList() {
         LinkedList list = new LinkedList();
