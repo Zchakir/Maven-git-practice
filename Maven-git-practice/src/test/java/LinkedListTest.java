@@ -1,10 +1,12 @@
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
 import static org.junit.Assert.*;
 
 public class LinkedListTest {
 
     @Test
     public void testAddNode() {
+
         LinkedList list = new LinkedList();
         list.addNode(5);
         list.addNode(10);
@@ -24,6 +26,7 @@ public class LinkedListTest {
         assertEquals(15, list.getTail().data);
     }
 
+
     @Test
     public void testGetNode() {
         LinkedList list = new LinkedList();
@@ -42,6 +45,7 @@ public class LinkedListTest {
         list.addNode(5);
         assertFalse(list.isEmpty());
     }
+
     @Test
     public void testAddNodeToEmptyList() {
         LinkedList list = new LinkedList();
@@ -73,7 +77,7 @@ public class LinkedListTest {
         assertEquals(4, list.size());
         assertEquals(5, list.getHead().data);
         assertEquals(20, list.getTail().data);
-        assertEquals(15, list.getNode(2).data);
+        assertEquals(15, list.getNodeByIndex(2).data);
     }
 
     @Test
@@ -175,4 +179,6 @@ public class LinkedListTest {
         assertNull(list.getHead());
         assertNull(list.getTail());
     }
+
+
 }
