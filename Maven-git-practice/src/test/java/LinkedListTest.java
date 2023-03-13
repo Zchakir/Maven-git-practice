@@ -1,4 +1,5 @@
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 public class LinkedListTest {
@@ -175,4 +176,5 @@ public class LinkedListTest {
         assertNull(list.getHead());
         assertNull(list.getTail());
     }
+
 }
