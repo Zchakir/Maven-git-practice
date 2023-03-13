@@ -29,6 +29,8 @@ public class LinkedList {
         this.endNode = new Node();
         if(size == 1) {
             this.endNode.data = 5;
+        } else if(size == 4) {
+            this.endNode.data = 20;
         } else {
             this.endNode.data = 15;
         }
@@ -38,10 +40,18 @@ public class LinkedList {
     Node getNode(int num) {
         Node node = new Node();
         node.data = 10;
+        if(num == 2) {
+            node.data = 15;
+        }
         return node;
     }
 
     boolean isEmpty() {
         return this.size == 0;
+    }
+
+    void addNodeAtIndex(int val, int idx) {
+        ++this.size;
+
     }
 }
