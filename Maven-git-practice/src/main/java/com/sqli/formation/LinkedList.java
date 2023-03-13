@@ -1,24 +1,24 @@
 package com.sqli.formation;
 
 public class LinkedList {
-    Node head;
-    Node Tail;
+    private Node head;
+    private Node tail;
     private int size;
 
     public LinkedList() {
         head = null;
-        Tail = null;
+        tail = null;
         size = 0;
     }
 
-    public void addNode(int i) {
-        Node node = new Node(i);
+    public void addNode(int data) {
+        Node node = new Node(data);
         if (isEmpty()) {
             head = node;
         } else {
-            Tail.next = node;
+            tail.next = node;
         }
-        Tail = node;
+        tail = node;
         size++;
     }
 
@@ -27,14 +27,14 @@ public class LinkedList {
     }
 
     public boolean removeNode(int data) {
-        if (head == null) {
+        if (isEmpty()) {
             return false;
         }
 
         if (head.data == data) {
             head = head.next;
             if (head == null) {
-                Tail = null;
+                tail = null;
             }
             size--;
             return true;
@@ -46,7 +46,7 @@ public class LinkedList {
             if (current.data == data) {
                 prev.next = current.next;
                 if (prev.next == null) {
-                    Tail = prev;
+                    tail = prev;
                 }
                 size--;
                 return true;
@@ -62,7 +62,7 @@ public class LinkedList {
     }
 
     public Node getTail() {
-        return Tail;
+        return tail;
     }
 
     public Node getNode(int index) {
@@ -78,13 +78,8 @@ public class LinkedList {
         return current;
     }
 
-
     public boolean isEmpty() {
-        if (head == null) {
-            return true;
-        } else {
-            return false;
-        }
+        return head == null;
     }
 
     public boolean addNodeAtIndex(int data, int index) {
@@ -96,12 +91,12 @@ public class LinkedList {
         if (index == 0) {
             newNode.next = head;
             head = newNode;
-            if (Tail == null) {
-                Tail = newNode;
+            if (tail == null) {
+                tail = newNode;
             }
         } else if (index == size) {
-            Tail.next = newNode;
-            Tail = newNode;
+            tail.next = newNode;
+            tail = newNode;
         } else {
             Node current = getNode(index - 1);
             newNode.next = current.next;
@@ -114,11 +109,7 @@ public class LinkedList {
 
     public void clear() {
         head = null;
-        Tail = null;
+        tail = null;
         size = 0;
     }
-
 }
-
-
-
