@@ -35,7 +35,7 @@ public class LinkedList {
     }
 
     public Node getTail() {
-        return new Node(15);
+        return this.nodesArray[nodesArray.length - 1];
 
     }
 

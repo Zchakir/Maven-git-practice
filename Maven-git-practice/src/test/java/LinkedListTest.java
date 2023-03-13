@@ -44,14 +44,14 @@ public class LinkedListTest {
         list.addNode(5);
         assertFalse(list.isEmpty());
     }
-//    @Test
-//    public void testAddNodeToEmptyList() {
-//        LinkedList list = new LinkedList();
-//        list.addNode(5);
-//        assertEquals(1, list.size());
-//        assertEquals(5, list.getHead().data);
-//        assertEquals(5, list.getTail().data);
-//    }
+    @Test
+    public void testAddNodeToEmptyList() {
+        LinkedList list = new LinkedList();
+        list.addNode(5);
+        assertEquals(1, list.size());
+        assertEquals(5, list.getHead().data);
+        assertEquals(5, list.getTail().data);
+    }
 //
 //    @Test
 //    public void testAddNodeToNonEmptyList() {
