@@ -70,8 +70,39 @@ public class LinkedList {
 	}
 
 	public void addNodeAtIndex(int i, int j) {
+		Node new_node=new Node();
+		new_node.data=i;
+		Node current_node=this.head;
+		Node precedent_node=this.head;
+		if(j==0 || j==this.size()) {
+			this.addNode(i);
+		}
+		else {
+		int k=0;
+		while(k<j && current_node.next!=null) {
+			precedent_node=current_node;
+			current_node=current_node.next;
+			k++;
+		}
+		if(k==j) {
+			precedent_node.next=new_node;
+			new_node.next=current_node;
+		}
 		
+		}
 		
+	}
+	public Node getNode(Integer i) {
+		Node current_node=this.head;
+		int k=0;
+		while(k<i && current_node.next!=null) {
+			current_node=current_node.next;
+			k++;
+		}
+		if(k==i) {
+			return current_node;
+		}
+		return null;
 	}
 	
 
