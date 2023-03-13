@@ -1,9 +1,14 @@
 public class LinkedList {
+
+    private int size;
+
     void addNode(int num) {
         return ;
     }
 
-    int size() {
-        return 3;
+    void removeNode(int num) {
+        --this.size;
     }
+
+
 }
