@@ -39,7 +39,7 @@ public class LinkedList {
             }
             current = current.next;
         }
-        return true;
+        return false;
     }
 
     public int size() {
@@ -68,14 +68,16 @@ public class LinkedList {
         return current;
     }
 
-    public Node getNode(int i) {
-        Node<Integer> current = this.head;
-        if (current == null) {
+    public Node getNode(int data) {
+        Node<Integer> current = head;
+        if (head == null) {
             return null;
-        }
-        while (current.data != i) {
+        } else {
+             current = head;
+            while (current.next!=null&&current.data!=data) {
+                current = current.next;
+            }
 
-            current = current.next;
         }
         return current;
     }
