@@ -28,16 +28,33 @@ public class LinkedList {
     }
 
     public void removeNode(int i) {
+        if(head.getData() == i) {
+            head = head.getNext();
+        }
+        else {
+            Node currentNode = head;
+            while (currentNode.getNext().getData() != i) {
+                currentNode = currentNode.getNext();
+            }
+            currentNode.setNext(currentNode.getNext().getNext());
+        }
         size--;
     }
 
     public Node getHead() {
-        Node node = new Node(5);
-        return node;
+        return head;
     }
 
     public Node getTail() {
-        Node node = new Node(15);
+        Node currentNode = head;
+        while (currentNode.getNext() != null) {
+            currentNode = currentNode.getNext();
+        }
+        return currentNode;
+    }
+
+    public Node getNode(int i) {
+        Node node = new Node(10);
         return node;
     }
 }
