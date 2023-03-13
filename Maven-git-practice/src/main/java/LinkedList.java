@@ -67,12 +67,17 @@ public class LinkedList {
 
     public void addNodeAtIndex(int data, int index) {
         Node newNode = new Node(data);
-        Node currentNode = head;
-        for (int i = 1; i < index; i++) {
-            currentNode = currentNode.getNext();
+        if (head == null) {
+            head = newNode;
         }
-        newNode.setNext(currentNode.getNext());
-        currentNode.setNext(newNode);
+        else {
+            Node currentNode = head;
+            for (int i = 1; i < index; i++) {
+                currentNode = currentNode.getNext();
+            }
+            newNode.setNext(currentNode.getNext());
+            currentNode.setNext(newNode);
+        }
         size++;
     }
 }
