@@ -105,7 +105,7 @@ public class LinkedListTest {
         assertNull(list.getHead());
         assertNull(list.getTail());
     }
-/*
+
     @Test
     public void testRemoveNodeFromNonEmptyList() {
         LinkedList list = new LinkedList();
@@ -135,7 +135,7 @@ public class LinkedListTest {
         LinkedList list = new LinkedList();
         assertNull(list.getNode(5));
     }
-
+/*
     @Test
     public void testGetNodeFromNonEmptyList() {
         LinkedList list = new LinkedList();
