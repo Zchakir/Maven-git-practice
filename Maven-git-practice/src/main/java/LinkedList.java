@@ -27,12 +27,12 @@ public class LinkedList {
 		
 	}
 
-	public int getHead() {
-		return list.get(0);
+	public Node getHead() {
+		return new Node();
 	}
 
-	public int getTail() {
-		return list.get(list.size()-1);
+	public Node getTail() {
+		return new Node();
 	}
 
 	
