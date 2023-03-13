@@ -38,9 +38,13 @@ public class LinkedList {
     }
 
     public Node getHead() {
-        return new Node();
+        return this.head;
     }
     public Node getTail() {
-        return new Node();
+        Node node = head;
+        while(node.next != null){
+            node = node.next;
+        }
+        return node;
     }
 }
