@@ -14,7 +14,7 @@ public class LinkedListTest {
         list.addNode(15);
         assertEquals(3, list.size());
     }
-/*
+
     @Test
     public void testRemoveNode() {
         LinkedList list = new LinkedList();
@@ -23,10 +23,10 @@ public class LinkedListTest {
         list.addNode(15);
         list.removeNode(10);
         assertEquals(2, list.size());
-        assertEquals(5, list.getHead().data);
-        assertEquals(15, list.getTail().data);
+        assertEquals(5, list.getHead());
+        assertEquals(15, list.getTail());
     }
-
+/*
     @Test
     public void testGetNode() {
         LinkedList list = new LinkedList();
