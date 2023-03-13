@@ -15,9 +15,6 @@ public class LinkedList {
     }
 
     public boolean removeNode(int value) {
-//        if (this.isEmpty())
-//            return false;
-
         int k  = -1;
         for (int j = 0; j < nodesArray.length; j++)
             if (nodesArray[j].data == value)
@@ -29,8 +26,8 @@ public class LinkedList {
             for (int j = k + 1; j < nodesArray.length; j++)
                 tmp[j-1] = nodesArray[j];
             nodesArray = tmp.clone();
+            return true;
         }
-
         return false;
     }
 

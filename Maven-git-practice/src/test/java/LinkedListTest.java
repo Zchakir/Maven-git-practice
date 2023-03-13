@@ -105,18 +105,18 @@ public class LinkedListTest {
         assertNull(list.getTail());
     }
 //
-//    @Test
-//    public void testRemoveNodeFromNonEmptyList() {
-//        LinkedList list = new LinkedList();
-//        list.addNode(5);
-//        list.addNode(10);
-//        list.addNode(15);
-//        list.addNode(20);
-//        assertTrue(list.removeNode(15));
-//        assertEquals(3, list.size());
-//        assertEquals(5, list.getHead().data);
-//        assertEquals(20, list.getTail().data);
-//    }
+    @Test
+    public void testRemoveNodeFromNonEmptyList() {
+        LinkedList list = new LinkedList();
+        list.addNode(5);
+        list.addNode(10);
+        list.addNode(15);
+        list.addNode(20);
+        assertTrue(list.removeNode(15));
+        assertEquals(3, list.size());
+        assertEquals(5, list.getHead().data);
+        assertEquals(20, list.getTail().data);
+    }
 //
 //    @Test
 //    public void testRemoveNonExistingNode() {
