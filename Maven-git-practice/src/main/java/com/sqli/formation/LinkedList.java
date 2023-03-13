@@ -65,15 +65,19 @@ public class LinkedList {
         return Tail;
     }
 
-    public Node getNode(int i) {
-        int incriment =0;
-        Node node = head;
-        while(incriment != i){
-            node = node.next;
-            incriment++;
+    public Node getNode(int index) {
+        if (index < 0 || index >= size) {
+            return null;
         }
-        return node;
+
+        Node current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.next;
+        }
+
+        return current;
     }
+
 
     public boolean isEmpty() {
         if (head == null) {
@@ -106,6 +110,12 @@ public class LinkedList {
 
         size++;
         return true;
+    }
+
+    public void clear() {
+        head = null;
+        Tail = null;
+        size = 0;
     }
 
 }
