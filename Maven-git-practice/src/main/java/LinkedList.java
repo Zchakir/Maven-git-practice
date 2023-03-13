@@ -45,12 +45,7 @@ public class LinkedList {
 	}
 
 	public Node getNode(int i) {
-		for(int j=0; j<list.size(); j++) {
-			if(list.get(j).data == i) {
-				return list.get(j);
-			}
-		}
-		return null;
+		return list.get(i);
 	}
 
 	public boolean isEmpty() {
@@ -62,7 +57,15 @@ public class LinkedList {
 	}
 
 	public void addNodeAtIndex(int i, int j) {
-		// TODO Auto-generated method stub
+		
+		Node n = new Node();
+		
+		n.data = i;
+	
+		size++;
+		
+		list.add(j, n);
+		
 		
 	}
 
