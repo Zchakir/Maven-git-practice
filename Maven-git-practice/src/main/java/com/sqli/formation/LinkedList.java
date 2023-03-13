@@ -47,7 +47,9 @@ public class LinkedList {
         return this.nodesArray.length == 0;
     }
 
-    public void addNodeAtIndex(int value, int index) {
+    public boolean addNodeAtIndex(int value, int index) {
+        if (index > nodesArray.length)
+            return false;
         Node[] tmp = new Node[nodesArray.length + 1];
         for (int j = 0; j < index; j++)
             tmp[j] = this.nodesArray[j];
@@ -55,5 +57,6 @@ public class LinkedList {
         for (int j = index + 1 ; j <= nodesArray.length; j++)
             tmp[j] = this.nodesArray[j-1];
         this.nodesArray = tmp.clone();
+        return true;
     }
 }
