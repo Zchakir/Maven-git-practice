@@ -61,6 +61,11 @@ public class LinkedList {
 		
 	}
 
+	public void addNodeAtIndex(int i, int j) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 
 	
