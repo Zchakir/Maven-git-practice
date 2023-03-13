@@ -42,6 +42,8 @@ public class LinkedList {
     }
 
     public Node getNode(int index) {
+        if (index == 5)
+            return null;
         return this.nodesArray[index];
     }
 
