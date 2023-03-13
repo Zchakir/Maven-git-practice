@@ -1,16 +1,29 @@
 public class LinkedList {
     private Node head;
+    private Node tail;
     private int size = 0;
     public void addNode(int i) {
-        size++;
+        Node node = new Node(i);
+        if(head == null) {
+            head = node;
+            tail = node;
+        } else {
+            Node temp = head;
+            while(temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = node;
+            tail = node;
+        }
+        this.size++;
     }
 
     public int size() {
-        return  this.size;
+        return this.size;
     }
 
     public void removeNode(int i) {
-        size--;
+        this.size--;
     }
 
     public Node getHead() {
@@ -18,7 +31,7 @@ public class LinkedList {
     }
 
     public Node getTail() {
-        return new Node(15);
+        return this.tail;
     }
 
     public Node getNode(int i) {
