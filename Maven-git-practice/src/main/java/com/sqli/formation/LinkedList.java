@@ -1,25 +1,28 @@
 package com.sqli.formation;
 
+import java.util.List;
+
 public class LinkedList {
     int size;
+    List<Integer> list;
 
     public void addNode(int i) {
-        size++;
+        list.add(i);
     }
 
     public int size() {
-        return this.size;
+        return this.list.size();
     }
 
     public void removeNode(int i) {
-        size --;
+        list.remove(i);
     }
 
     public Object getHead() {
-        return null;
+        return list.get(0);
     }
 
     public Object getTail() {
-        return null;
+        return list.get(list.size() - 1);
     }
 }
