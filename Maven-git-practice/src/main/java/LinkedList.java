@@ -17,6 +17,7 @@ public class LinkedList {
             Node data1 = (Node) o;
             return data == data1.data;
         }
+
         @Override
         public int hashCode() {
             return Objects.hash(data);
@@ -28,7 +29,6 @@ public class LinkedList {
     public void addNode(int i) {
         list.add(new Node(i));
     }
-
     public int size() {
         return list.size();
     }
@@ -75,5 +75,9 @@ public class LinkedList {
             return false;
 
 
+    }
+
+    public void clear() {
+        list.clear();
     }
 }
