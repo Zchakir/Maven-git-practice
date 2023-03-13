@@ -63,4 +63,13 @@ public class LinkedList {
         }
         return current;
     }
+
+    public Node getNode(int i) {
+        Node<Integer> current = this.head;
+        while (current.data!=i) {
+
+            current = current.next;
+        }
+        return current;
+    }
 }
