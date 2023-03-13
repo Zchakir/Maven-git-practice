@@ -37,7 +37,11 @@ public class LinkedList {
     }
 
     public Node getTail() {
-        return list.get(list.size() -1);
+        try {
+            return list.get(list.size() - 1);
+        }catch (Exception e){
+            return null;
+        }
     }
 
 
