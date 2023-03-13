@@ -39,15 +39,26 @@ public class LinkedList {
 
     public void removeNode(int i) {
 
-        Node node =head;
 
-        while(node!=null){
+        Node new_node = new Node();
 
-            if(node.next!=null && node.next.data==i){
-                node.next=node.next.next;
+
+
+        if (head == null) {
+        }
+        else {
+
+            Node node = head;
+            while (node.next != null) {
+                if(node.next.data==i)
+                    node.next=node.next.next;
                 break;
             }
+
+
         }
+
+
 
 
 
@@ -55,15 +66,38 @@ public class LinkedList {
     }
 
     public Node getHead() {
-        return new Node();
+       return head;
     }
 
     public Node getTail() {
-        return new Node();
+        Node node =head;
+
+        while(node.next!=null)
+
+
+                node=node.next;
+
+            return node;
+
 
     }
 
     public Node getNode(int i) {
-        return new Node();
+        Node node = head;
+        while (node.next != null ) {
+           if(node.data==i)
+               return node;
+           node=node.next;
+        }
+        return null;
+    }
+
+    public boolean isEmpty() {
+        if (head==null) return true;
+        else return false;
+
+    }
+
+    public void addNodeAtIndex(int i, int i1) {
     }
 }
