@@ -26,8 +26,35 @@ public class LinkedList {
         return size;
     }
 
-    public void removeNode(int i) {
-        size--;
+    public boolean removeNode(int data) {
+        if (head == null) {
+            return false;
+        }
+
+        if (head.data == data) {
+            head = head.next;
+            if (head == null) {
+                Tail = null;
+            }
+            size--;
+            return true;
+        }
+
+        Node prev = head;
+        Node current = head.next;
+        while (current != null) {
+            if (current.data == data) {
+                prev.next = current.next;
+                if (prev.next == null) {
+                    Tail = prev;
+                }
+                size--;
+                return true;
+            }
+            prev = current;
+            current = current.next;
+        }
+        return false;
     }
 
     public Node getHead() {
