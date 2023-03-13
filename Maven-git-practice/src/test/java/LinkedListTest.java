@@ -165,16 +165,16 @@ public class LinkedListTest {
         assertFalse(list.isEmpty());
     }
 
-//    @Test
-//    public void testClearList() {
-//        LinkedList list = new LinkedList();
-//        list.addNode(5);
-//        list.addNode(10);
-//        list.addNode(15);
-//        list.addNode(20);
-//        list.clear();
-//        assertEquals(0, list.size());
-//        assertNull(list.getHead());
-//        assertNull(list.getTail());
-//    }
+    @Test
+    public void testClearList() {
+        LinkedList list = new LinkedList();
+        list.addNode(5);
+        list.addNode(10);
+        list.addNode(15);
+        list.addNode(20);
+        list.clear();
+        assertEquals(0, list.size());
+        assertNull(list.getHead());
+        assertNull(list.getTail());
+    }
 }

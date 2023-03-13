@@ -82,4 +82,8 @@ public class LinkedList {
         }
 
     }
+
+    public void clear() {
+        list.clear();
+    }
 }
