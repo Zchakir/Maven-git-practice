@@ -1,3 +1,5 @@
+import com.sqli.formation.LinkedList;
+import com.sqli.formation.Node;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -23,7 +25,7 @@ public class LinkedListTest {
         assertEquals(5, list.getHead().data);
         assertEquals(15, list.getTail().data);
     }
-
+//
     @Test
     public void testGetNode() {
         LinkedList list = new LinkedList();
@@ -50,7 +52,7 @@ public class LinkedListTest {
         assertEquals(5, list.getHead().data);
         assertEquals(5, list.getTail().data);
     }
-
+//
     @Test
     public void testAddNodeToNonEmptyList() {
         LinkedList list = new LinkedList();
@@ -75,7 +77,7 @@ public class LinkedListTest {
         assertEquals(20, list.getTail().data);
         assertEquals(15, list.getNode(2).data);
     }
-
+//
     @Test
     public void testAddNodeAtIndexToEmptyList() {
         LinkedList list = new LinkedList();
@@ -102,7 +104,7 @@ public class LinkedListTest {
         assertNull(list.getHead());
         assertNull(list.getTail());
     }
-
+//
     @Test
     public void testRemoveNodeFromNonEmptyList() {
         LinkedList list = new LinkedList();
@@ -115,7 +117,7 @@ public class LinkedListTest {
         assertEquals(5, list.getHead().data);
         assertEquals(20, list.getTail().data);
     }
-
+//
     @Test
     public void testRemoveNonExistingNode() {
         LinkedList list = new LinkedList();
@@ -132,7 +134,7 @@ public class LinkedListTest {
         LinkedList list = new LinkedList();
         assertNull(list.getNode(5));
     }
-
+//
     @Test
     public void testGetNodeFromNonEmptyList() {
         LinkedList list = new LinkedList();
@@ -149,7 +151,7 @@ public class LinkedListTest {
         list.addNode(10);
         assertNull(list.getNode(15));
     }
-
+//
     @Test
     public void testIsEmptyOnEmptyList() {
         LinkedList list = new LinkedList();
