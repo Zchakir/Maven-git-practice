@@ -73,8 +73,8 @@ public class LinkedList {
         if (head == null) {
             return null;
         } else {
-             current = head;
-            while (current.next!=null&&current.data!=data) {
+            current = head;
+            while (current.next != null && current.data != data) {
                 current = current.next;
             }
 
