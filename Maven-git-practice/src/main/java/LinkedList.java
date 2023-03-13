@@ -29,4 +29,10 @@ public class LinkedList {
         this.endNode.data = 15;
         return this.endNode;
     }
+
+    Node getNode(int num) {
+        Node node = new Node();
+        node.data = 10;
+        return node;
+    }
 }

@@ -24,7 +24,7 @@ public class LinkedListTest {
         assertEquals(5, list.getHead().data);
         assertEquals(15, list.getTail().data);
     }
-/*
+
     @Test
     public void testGetNode() {
         LinkedList list = new LinkedList();
@@ -35,7 +35,7 @@ public class LinkedListTest {
         assertNotNull(node);
         assertEquals(10, node.data);
     }
-
+/*
     @Test
     public void testIsEmpty() {
         LinkedList list = new LinkedList();
