@@ -152,11 +152,11 @@ public class LinkedListTest {
         assertNull(list.getNode(15));
     }
 //
-//    @Test
-//    public void testIsEmptyOnEmptyList() {
-//        LinkedList list = new LinkedList();
-//        assertTrue(list.isEmpty());
-//    }
+    @Test
+    public void testIsEmptyOnEmptyList() {
+        LinkedList list = new LinkedList();
+        assertTrue(list.isEmpty());
+    }
 //
 //    @Test
 //    public void testIsEmptyOnNonEmptyList() {
