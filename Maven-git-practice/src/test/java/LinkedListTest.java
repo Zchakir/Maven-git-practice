@@ -1,10 +1,17 @@
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import static org.junit.Assert.*;
 
 public class LinkedListTest {
+    private LinkedList list;
+    @BeforeEach
+    public void init() {
+        list = new LinkedList();
+    }
+
     @Test
     public void testAddNode() {
-        LinkedList list = new LinkedList();
         list.addNode(5);
         list.addNode(10);
         list.addNode(15);
@@ -13,7 +20,6 @@ public class LinkedListTest {
 
     @Test
     public void testRemoveNode() {
-        LinkedList list = new LinkedList();
         list.addNode(5);
         list.addNode(10);
         list.addNode(15);
@@ -175,5 +181,11 @@ public class LinkedListTest {
         assertEquals(0, list.size());
         assertNull(list.getHead());
         assertNull(list.getTail());
+    }
+
+    @AfterEach
+    public void destroy() {
+        list.setHead(null);
+        list.setSize(0);
     }
 }

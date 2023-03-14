@@ -1,9 +1,17 @@
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Getter
+@Setter
 @NoArgsConstructor
 public class LinkedList {
     private Node head;
     private static int size = 0;
+
+    public static void setSize(int size) {
+        LinkedList.size = size;
+    }
 
     public void addNode(int i) {
         Node newNode = new Node(i);
