@@ -2,7 +2,6 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class LinkedListTest {
-
     @Test
     public void testAddNode() {
         LinkedList list = new LinkedList();
@@ -96,8 +95,6 @@ public class LinkedListTest {
         assertEquals(2, list.size());
     }
 
-    /*
-
     @Test
     public void testRemoveNodeFromEmptyList() {
         LinkedList list = new LinkedList();
@@ -116,8 +113,8 @@ public class LinkedListTest {
         list.addNode(20);
         assertTrue(list.removeNode(15));
         assertEquals(3, list.size());
-        assertEquals(5, list.getHead().data);
-        assertEquals(20, list.getTail().data);
+        assertEquals(5, list.getHead().getData());
+        assertEquals(20, list.getTail().getData());
     }
 
     @Test
@@ -127,8 +124,8 @@ public class LinkedListTest {
         list.addNode(10);
         assertFalse(list.removeNode(15));
         assertEquals(2, list.size());
-        assertEquals(5, list.getHead().data);
-        assertEquals(10, list.getTail().data);
+        assertEquals(5, list.getHead().getData());
+        assertEquals(10, list.getTail().getData());
     }
 
     @Test
@@ -143,7 +140,7 @@ public class LinkedListTest {
         list.addNode(5);
         list.addNode(10);
         list.addNode(15);
-        assertEquals(10, list.getNode(10).data);
+        assertEquals(10, list.getNode(10).getData());
     }
 
     @Test
@@ -178,5 +175,5 @@ public class LinkedListTest {
         assertEquals(0, list.size());
         assertNull(list.getHead());
         assertNull(list.getTail());
-    } */
+    }
 }

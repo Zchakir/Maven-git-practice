@@ -1,12 +1,9 @@
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
 public class LinkedList {
     private Node head;
     private static int size = 0;
-    public LinkedList() {
-    }
-
-    public LinkedList(Node head) {
-        this.head = head;
-    }
 
     public void addNode(int i) {
         Node newNode = new Node(i);
@@ -27,7 +24,10 @@ public class LinkedList {
         return size;
     }
 
-    public void removeNode(int i) {
+    public boolean removeNode(int i) {
+        if (head == null) {
+            return false;
+        }
         if(head.getData() == i) {
             head = head.getNext();
         }
@@ -35,10 +35,14 @@ public class LinkedList {
             Node currentNode = head;
             while (currentNode.getNext().getData() != i) {
                 currentNode = currentNode.getNext();
+                if (currentNode.getNext() == null) {
+                    return false;
+                }
             }
             currentNode.setNext(currentNode.getNext().getNext());
         }
         size--;
+        return true;
     }
 
     public Node getHead() {
@@ -46,6 +50,9 @@ public class LinkedList {
     }
 
     public Node getTail() {
+        if (head == null) {
+            return null;
+        }
         Node currentNode = head;
         while (currentNode.getNext() != null) {
             currentNode = currentNode.getNext();
@@ -54,8 +61,14 @@ public class LinkedList {
     }
 
     public Node getNode(int i) {
+        if (head == null) {
+            return null;
+        }
         Node currentNode = head;
         while (currentNode.getData() != i) {
+            if (currentNode.getNext() == null) {
+                return null;
+            }
             currentNode = currentNode.getNext();
         }
         return currentNode;
@@ -79,5 +92,10 @@ public class LinkedList {
             currentNode.setNext(newNode);
         }
         size++;
+    }
+
+    public void clear() {
+        head = null;
+        size = 0;
     }
 }
