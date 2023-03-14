@@ -24,24 +24,24 @@ public class LinkedListTest {
         assertEquals(15, list.getTail().data);
     }
 
-//    @Test
-//    public void testGetNode() {
-//        LinkedList list = new LinkedList();
-//        list.addNode(5);
-//        list.addNode(10);
-//        list.addNode(15);
-//        Node node = list.getNode(10);
-//        assertNotNull(node);
-//        assertEquals(10, node.data);
-//    }
+    @Test
+    public void testGetNode() {
+        LinkedList list = new LinkedList();
+        list.addNode(5);
+        list.addNode(10);
+        list.addNode(15);
+        LinkedList.Node node = list.getNode(10);
+        assertNotNull(node);
+        assertEquals(10, node.data);
+    }
 
-//    @Test
-//    public void testIsEmpty() {
-//        LinkedList list = new LinkedList();
-//        assertTrue(list.isEmpty());
-//        list.addNode(5);
-//        assertFalse(list.isEmpty());
-//    }
+    @Test
+    public void testIsEmpty() {
+        LinkedList list = new LinkedList();
+        assertTrue(list.isEmpty());
+        list.addNode(5);
+        assertFalse(list.isEmpty());
+    }
     @Test
     public void testAddNodeToEmptyList() {
         LinkedList list = new LinkedList();
@@ -51,31 +51,31 @@ public class LinkedListTest {
         assertEquals(5, list.getTail().data);
     }
 
-//    @Test
-//    public void testAddNodeToNonEmptyList() {
-//        LinkedList list = new LinkedList();
-//        list.addNode(5);
-//        list.addNode(10);
-//        list.addNode(15);
-//        list.addNode(20);
-//        assertEquals(4, list.size());
-//        assertEquals(5, list.getHead().data);
-//        assertEquals(20, list.getTail().data);
-//    }
-//
-//    @Test
-//    public void testAddNodeAtIndex() {
-//        LinkedList list = new LinkedList();
-//        list.addNode(5);
-//        list.addNode(10);
-//        list.addNode(20);
-//        list.addNodeAtIndex(15, 2);
-//        assertEquals(4, list.size());
-//        assertEquals(5, list.getHead().data);
-//        assertEquals(20, list.getTail().data);
-//        assertEquals(15, list.getNode(2).data);
-//    }
-//
+    @Test
+    public void testAddNodeToNonEmptyList() {
+        LinkedList list = new LinkedList();
+        list.addNode(5);
+        list.addNode(10);
+        list.addNode(15);
+        list.addNode(20);
+        assertEquals(4, list.size());
+        assertEquals(5, list.getHead().data);
+        assertEquals(20, list.getTail().data);
+    }
+
+    @Test
+    public void testAddNodeAtIndex() {
+        LinkedList list = new LinkedList();
+        list.addNode(5);
+        list.addNode(10);
+        list.addNode(20);
+        list.addNodeAtIndex(15, 2);
+        assertEquals(4, list.size());
+        assertEquals(5, list.getHead().data);
+        assertEquals(20, list.getTail().data);
+        assertEquals(15, list.getNode(2).data);
+    }
+
 //    @Test
 //    public void testAddNodeAtIndexToEmptyList() {
 //        LinkedList list = new LinkedList();
@@ -133,34 +133,34 @@ public class LinkedListTest {
 //        assertNull(list.getNode(5));
 //    }
 //
-//    @Test
-//    public void testGetNodeFromNonEmptyList() {
-//        LinkedList list = new LinkedList();
-//        list.addNode(5);
-//        list.addNode(10);
-//        list.addNode(15);
-//        assertEquals(10, list.getNode(10).data);
-//    }
-//
-//    @Test
-//    public void testGetNonExistingNode() {
-//        LinkedList list = new LinkedList();
-//        list.addNode(5);
-//        list.addNode(10);
-//        assertNull(list.getNode(15));
-//    }
-//
-//    @Test
-//    public void testIsEmptyOnEmptyList() {
-//        LinkedList list = new LinkedList();
-//        assertTrue(list.isEmpty());
-//    }
-//
-//    @Test
-//    public void testIsEmptyOnNonEmptyList() {
-//        LinkedList list = new LinkedList();
-//        list.addNode(5);
-//        assertFalse(list.isEmpty());
+    @Test
+    public void testGetNodeFromNonEmptyList() {
+        LinkedList list = new LinkedList();
+        list.addNode(5);
+        list.addNode(10);
+        list.addNode(15);
+        assertEquals(10, list.getNode(10).data);
+    }
+
+    @Test
+    public void testGetNonExistingNode() {
+        LinkedList list = new LinkedList();
+        list.addNode(5);
+        list.addNode(10);
+        assertNull(list.getNode(15));
+    }
+
+    @Test
+    public void testIsEmptyOnEmptyList() {
+        LinkedList list = new LinkedList();
+        assertTrue(list.isEmpty());
+    }
+
+    @Test
+    public void testIsEmptyOnNonEmptyList() {
+        LinkedList list = new LinkedList();
+        list.addNode(5);
+        assertFalse(list.isEmpty());
 //    }
 //
 //    @Test
@@ -175,4 +175,4 @@ public class LinkedListTest {
 //        assertNull(list.getHead());
 //        assertNull(list.getTail());
 //    }
-}
+    }}
