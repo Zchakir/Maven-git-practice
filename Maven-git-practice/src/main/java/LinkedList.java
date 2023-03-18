@@ -12,8 +12,8 @@ public class LinkedList {
 
 
 
-    public void addNode(int i) {
-        Node node =new Node(i);
+    public void addNode(int data) {
+        Node node =new Node(data);
         this.nodeList.add(node);
     }
 
@@ -21,10 +21,11 @@ public class LinkedList {
         return this.nodeList.size();
     }
 
-    public boolean removeNode(int i) {
-        for(int j=0;j<nodeList.size();j++){
-            if(nodeList.get(j).data==i){
-                nodeList.remove(j);
+    public boolean removeNode(int data) {
+
+        for(int cpt=0;cpt<nodeList.size();cpt++){
+            if(nodeList.get(cpt).data==data){
+                nodeList.remove(cpt);
                 return true;
             }
         }
@@ -46,13 +47,13 @@ public class LinkedList {
     }
 
     //Should retry it
-    public Node getNode(int i) {
+    public Node getNode(int data) {
 
         Node  node=null;
 
-        for(int j=0;j<this.nodeList.size();j++){
-            if(nodeList.get(j).data==i){
-                node= this.nodeList.get(j);
+        for(int cpt=0;cpt<this.nodeList.size();cpt++){
+            if(nodeList.get(cpt).data==data){
+                node= this.nodeList.get(cpt);
             }
         }
         return node;
@@ -63,18 +64,18 @@ public class LinkedList {
         return this.nodeList.isEmpty();
     }
 
-    public boolean addNodeAtIndex(int i, int i1) {
-        if(this.nodeList.size()<=i1 && !this.nodeList.isEmpty())
+    public boolean addNodeAtIndex(int data, int index) {
+        if(this.nodeList.size()<=index && !this.nodeList.isEmpty())
             return false;
-        this.nodeList.add(i1,new Node(i));
+        this.nodeList.add(index,new Node(data));
         return true;
     }
 
     public void clear() {
 
         int sizeOfList=nodeList.size();
-        for(int j=sizeOfList-1;j>=0;j--){
-           this.removeNode(this.nodeList.get(j).data);
+        for(int cpt=sizeOfList-1;cpt>=0;cpt--){
+           this.removeNode(this.nodeList.get(cpt).data);
         }
 
     }
