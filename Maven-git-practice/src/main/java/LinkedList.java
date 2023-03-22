@@ -1,12 +1,12 @@
-import java.util.*;
-import java.util.*;
 public class LinkedList {
 
     public LinkedList() {
 
     }
 
-
+    public void clear() {
+      head=null;
+    }
 
 
     //constructor
@@ -47,39 +47,43 @@ public class LinkedList {
         return count;
     }
 
-    public void removeNode(int i) {
+    public boolean removeNode(int data) {
 
         Node temp = head;
         Node prev=null;
+        if(temp==null){
+            return false;
+        }
+
         //si notre element a supprimer est le referencer par le head
-        if(temp!=null && temp.data==i){
+        if(temp!=null && temp.data==data){
             temp.next=head;
+            return true;
         }
         // Search for the key to be deleted, keep track of
-        while(temp.next!=null && temp.data!=i){
+        while(temp.next!=null && temp.data!=data){
             prev=temp;
             temp=temp.next;
         }
+
         // If key was not present in linked list
-            if (temp == null){
-                return;
+            if (temp.next==null){
+                return false;
             }
         // Unlink the node from linked list
             prev.next = temp.next;
 
 
-
-
+        return true;
     }
 
     public Node  getHead() {
         return head;
-
-
     }
 
     public Node getTail() {
         Node temp =head;
+        if(temp==null) return null;
         while(temp.next!=null){
             temp=temp.next;
         }
@@ -87,6 +91,22 @@ public class LinkedList {
 
 
     }
+    public Object printList()
+    {
+        System.out.println("Your list is: ");
+        Node position = head;
+        while(position != null)
+        {
+            System.out.print(position.data + " ");
+            position = position.next;
+        }
+        System.out.println();
+
+        return null;
+    }
+
+
+
     public Node getNode(int i) {
         Node temp =head;
         while(temp!=null ){
@@ -111,94 +131,24 @@ public class LinkedList {
 
     }
     public void addNodeAtIndex(int data, int index) {
-        Node newnode=new Node(data);
-        Node temp=head;
-        for(int i=0 ; i< index;i++){
-            temp=temp.next;
+        Node newnode = new Node(data);
+        Node temp = head;
+        if (temp == null)
+            head = newnode;
+
+
+        for (int i = 1; i < index; i++) {
+            temp = temp.next;
         }
-        newnode.next = temp.next;
-        temp.next = newnode;
-        System.out.println(head);
+
+            newnode.next = temp.next;
+            temp.next = newnode;
+
+
+
 
 
     }
-
-
-
-
-
-
-
-
-
-
-
-//    class Node
-//    {
-//        int data;
-//        Node next;
-//        Node(int d)  { data = d;  next = null; }
-//    }
-//    Node Tail;
-//
-//    public void addNode(int i) {
-//        Node new_node = new Node(i);
-//        new_node.next = Tail;
-//        Tail = new_node;
-//    }
-//
-//
-//    public int size() {
-//        Node temp = Tail;
-//        int count = 0;
-//        while (temp != null)
-//        {
-//            count++;
-//            temp = temp.next;
-//        }
-//        return count;
-//    }
-//    public Node getHead() {
-//        Node temp = Tail;
-//        while(temp.next != null) {
-//            temp = temp.next;
-//        }
-//        return temp;
-//
-//    }
-//    public Node getTail() {
-//        return this.Tail;
-//
-//    }
-//
-//    public void removeNode(int i) {
-//        {
-//            // Store head node
-//            Node temp = head, prev = null;
-//
-//            // If head node itself holds the key to be deleted
-//            if (temp != null && temp.data == i) {
-//                head= temp.next; // Changed head
-//                return;
-//            }
-//
-//            // Search for the key to be deleted, keep track of
-//            // the previous node as we need to change temp.next
-//            while (temp != null && temp.data != i) {
-//                prev = temp;
-//                temp = temp.next;
-//            }
-//
-//            // If key was not present in linked list
-//            if (temp == null)
-//                return;
-//
-//            // Unlink the node from linked list
-//            prev.next = temp.next;
-//        }
-//
-//
-//    }
 
 
 
